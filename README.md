@@ -1,1 +1,1 @@
-# course
+# course-weeks
