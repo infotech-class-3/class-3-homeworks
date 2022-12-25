@@ -2,8 +2,9 @@
 
 # Bir kurs basvurusu ile ilgili ogrenci kayit formu olusturun.
 
+# Form icin temsili, basit bir resim ekleyin.
 # 1.Bolum ogrenci bilgileri ile ilgili,
-## adi, soyadi, dogum tarihi, dogum yeri, email, cinsiyet, tel vb. bilgileri ile ogrenim ve yabanci dil durumunu gostericek. 
+## adi, soyadi, dogum tarihi, dogum yeri, email, cinsiyet, tel vb. bilgileri ile, ogrenim ve yabanci dil durumunu gostericek. 
 
 # 2.Bolum ogrencinın basvuru yapacagı kursla ılgılı kısım,
 ## checkbox, radio, select ve textarea elementlerini kullanin
