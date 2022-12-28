@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="ogrenci.jpg" alt="image" style="width: 100px;height: 100px;">
+    
+    <h1 style="text-align: center;">Ogrenci Bilgi Sistemi</h1>
+<br>
+<br>
+
+    <fieldset>
+        <legend>1. Bolum</legend>
+        <!-- <h3 style="text-align: center;">1. Bolum</h3> -->
+        <form >
+            <label for="fullname">ADI SOYADI</label><br>
+            <input type="text" id="fullname" name="fullname"> <br><br>
+
+            <label for="schoolno">OKUL NO</label><br>
+            <input type="number" id="schoolno" name="schoolno"> <br><br>
+
+            <label for="adress">ADRES</label><br>
+            <input type="text" id="adress" name="adress"> <br><br>
+
+            <label for="email">E-Mail</label><br>
+            <input type="email" id="email" name="fullname" 
+            pattern=".+@infotech.com" size="30" required> <br><br>
+
+            <label for="addinfo">Ek Bilgiler</label> <br>
+            <textarea name="addinfo" id="addinfo" cols="30" rows="10"></textarea>
+        </form>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+            <legend>2. Bolum</legend>
+            <!-- <h3 style="text-align: center;">2. Bolum</h3> -->
+            Ogrencinin Cinsiyeti: <br/>
+        <input type="radio" name="secim" value="evet"/> Kiz
+        <input type="radio" name="secim" value="hayir"/> Erkek
+        <br>
+        <br>
+
+        Bildigi Diller: <br/>
+        <input type="checkbox" id="ing"/> Ingilizce
+        <input type="checkbox" id="fr"/> Fransizca
+        <input type="checkbox" id="alm"/> Almanca
+        <br>
+
+        <h3>Katilmak Istedigi Kurs</h3>
+        <select>
+            <option value="ing">Full Stack Web Developing</option>
+            <option value="fr">Syber Security</option>
+            <option value="alm">Data Analys</option>
+        </select>
+            </fieldset>
+            <br><br>
+
+        <fieldset>
+            <table border="1 px">
+                <h3 style="text-align: center;">Kisisel Bilgiler</h3>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>Isim</th>
+                        <th>Dogum Yeri</th>
+                        <th>Yas</th>
+                        <th>Bildigi Diller</th>
+                        <th>Katilmak Istedigi Kurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ercan AYDIN</td>
+                        <td>Bitlis</td>
+                        <td>39</td>
+                        <td>Ingilizce</td>
+                        <td>Full Stack Web Developing</td>
+                    </tr>
+                    <tr>
+                        <td>Mehmet Efe AYDIN</td>
+                        <td>Adana</td>
+                        <td>11</td>
+                        <td>Almanca</td>
+                        <td>Syber Security</td>
+                    </tr>
+                    <tr>
+                        <td>Eyup YAPA</td>
+                        <td>Istanbul</td>
+                        <td>9</td>
+                        <td>Fransizca</td>
+                        <td>Data Analys</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+
+
+</body>
+</html>
