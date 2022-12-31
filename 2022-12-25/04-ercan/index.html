@@ -14,11 +14,17 @@
 <br>
 
     <fieldset>
-        <legend>1. Bolum</legend>
+        <legend style="text-align: center; "><h3>1. Bolum</h3></legend>
         <!-- <h3 style="text-align: center;">1. Bolum</h3> -->
         <form >
             <label for="fullname">ADI SOYADI</label><br>
             <input type="text" id="fullname" name="fullname"> <br><br>
+
+            <label for="password">Sifresi</label><br>
+            <input type="password" id="password" name="password"> <br><br>
+
+            <label for="birthday">Dogum Tarihi</label><br>
+            <input type="date" id="birthday" name="birthday"> <br><br>
 
             <label for="schoolno">OKUL NO</label><br>
             <input type="number" id="schoolno" name="schoolno"> <br><br>
@@ -37,7 +43,7 @@
         <br><br>
 
         <fieldset>
-            <legend>2. Bolum</legend>
+            <legend style="text-align: center;"><h3>2. Bolum</h3></legend>
             <!-- <h3 style="text-align: center;">2. Bolum</h3> -->
             Ogrencinin Cinsiyeti: <br/>
         <input type="radio" name="secim" value="evet"/> Kiz
@@ -53,15 +59,19 @@
 
         <h3>Katilmak Istedigi Kurs</h3>
         <select>
+            <option value="default">Lutfen Seciniz</option>
             <option value="ing">Full Stack Web Developing</option>
             <option value="fr">Syber Security</option>
             <option value="alm">Data Analys</option>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
         </select>
             </fieldset>
             <br><br>
 
         <fieldset>
-            <table border="1 px">
+            <table border= "1px solid black">
                 <h3 style="text-align: center;">Kisisel Bilgiler</h3>
                 <caption></caption>
                 <thead>
