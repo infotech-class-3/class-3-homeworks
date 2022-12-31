@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information Form</title>
+  </head>
+  <body>
+    <img src="1.png" alt="programing" width="50%" />
+    <form>
+      <fieldset>
+        <legend><h2>Student Information Form</h2></legend>
+        <label for="name"> Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="name" placeholder="Jhony" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="surname"> Surname:</label
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="surname" placeholder="Deep" /><br /><br /><br />
+
+        <label for="birtday"> Birthday:</label>&nbsp;&nbsp;
+        <input
+          type="text"
+          id="birtday"
+          placeholder="01/01/1979"
+        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="place"> Place of Birth:</label>
+        <input
+          type="text"
+          id="place"
+          placeholder="New York"
+        /><br /><br /><br />
+
+        <label for="email">E-mail:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email" id="email" placeholder="example@gmail.com" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label for="gender">Gender:</label
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select>
+          <option value="">--Please choose your gender--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br /><br />
+
+        <label for="education">Education:</label>
+        <input
+          type="text"
+          id="education"
+          placeholder="University of Cambridge"
+        /><br /><br /><br /><br />
+        <label for="surname">Which dou you know languages:</label><br />
+        <select>
+          <option value="">Choose One language</option>
+          <option value="english">English</option>
+          <option value="turkish">Turkish</option>
+          <option value="Italian">Italian</option></select
+        >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>Level:</label>
+        <input type="radio" name="level" value="a1" />A1
+        <input type="radio" name="level" value="a2" />A2
+        <input type="radio" name="level" value="b1" />B1
+        <input type="radio" name="level" value="b2" />B2
+        <input type="radio" name="level" value="c1" />C1
+        <input type="radio" name="level" value="c2" />C2 <br /><br /><br />
+        <button type="submit">Save</button>
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend><h2>Course Information Form</h2></legend>
+
+        <label for="">NAME OF THE COURSE YOU WANT TO JOIN</label><br />
+        <input type="radio" name="level" value="a1" />C<br />
+        <input type="radio" name="level" value="a2" />C++<br />
+        <input type="radio" name="level" value="b1" />Java<br />
+        <input type="radio" name="level" value="b2" />PHP<br />
+        <input type="radio" name="level" value="c1" />PHYTON<br />
+        <input type="radio" name="level" value="c2" />JAVASCRIPT<br />
+        <hr />
+        <label for="">PLACES YOU WANT TO ATTEND THE COURSE</label><br />
+
+        <input type="checkbox" name="city" value="newyork" />New York<br />
+        <input type="checkbox" name="city" value="miami" />Miami<br />
+        <input type="checkbox" name="city" value="baston" />Baston<br />
+        <input type="checkbox" name="city" value="oklahoma" />Oklahoma City<br />
+        <hr />
+
+        <label for="">Do You Work?</label><br />
+        <input type="radio" name="work" value="yes" />Yes
+        <input type="radio" name="work" value="no" />No <br /><br />
+        <button type="submit">Save</button>
+      </fieldset>
+    </form><br/><br/><br/>
+
+
+    <label><h1>DATA</h1></label>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Suname</th>
+                <th>Age</th>
+                <th>Place of Birth</th>
+                <th>E-mail</th>
+                <th>Gender</th>
+                <th>Which is Course</th>
+                <th>Which Place</th>
+                <th>Work</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jhony</td>
+                <td>Deep</td>
+                <td>30</td>
+                <td>New York</td>
+                <td>jhonydeep@gmail.com</td>
+                <td>Male</td>
+                <td>C</td>
+                <td>Baston</td>
+                <td>Yes</td>
+            </tr>
+
+            <tr>
+                <td>Michael</td>
+                <td>Jocksan</td>
+                <td>50</td>
+                <td>San Diego</td>
+                <td>michaeljackson@gmail.com</td>
+                <td>Male</td>
+                <td>Java</td>
+                <td>New York</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Diana</td>
+                <td>Smit</td>
+                <td>25</td>
+                <td>Kansas City</td>
+                <td>dianasmit@gmail.com</td>
+                <td>Female</td>
+                <td>Phyton</td>
+                <td>New York</td>
+                <td>No</td>
+            </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
