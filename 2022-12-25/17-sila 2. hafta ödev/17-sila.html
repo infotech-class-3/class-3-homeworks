@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ÖĞRENCİ KAYIT FORMU</h2>
+    <img src="örnek.png" width="75px" height="86px" />
+    <form>
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+                <label for="name">Ad</label> <br/>
+                <input type="text" id="name"Ad> <br/><br/>
+                <label for="surname">Soyad</label> <br/>
+                <input type="text" id="surname"Soyad> <br/><br/>
+                <label for="tarih">Doğum Tarihi</label> <br/>
+                <input type="date" id="tarih"> <br/><br/> 
+                <caption>Doğum Yeri</caption>
+                <select disabled>
+                    <option value="Tr">Türkiye</option> 
+                    <option value="Nd">Hollanda</option>
+                    <option value="Alm">Almanya</option>
+                    <option value="?">Diğer</option>
+                </select>
+                <pre>Bu bilgi artık gerekli değildir</pre> <br/><br/>
+                <label for="mail">E-posta adresi</label> <br/>
+                <input type="email" id="mail"Soyad> <br/><br/>
+                <label for="cinsiyet">Seçiniz</label> <br/>
+                <input type="radio" name="choice" value="female" class="cinsiyet">Kadın <br/> 
+                <input type="radio" name="choice" value="male" class="cinsiyet">Erkek <br/><br/>
+                <label for="telefon">Telefon Numarası</label> <br/>
+                <input type="tel" id="telefon"> <br/><br/>
+
+                <fieldset>
+                    <legend>Eğitim</legend>
+                    <caption>Mezuniyet</caption>
+                    <select>
+                        <option>İlkokul</option>
+                        <option>Ortaokul</option>
+                        <option>Lise</option>
+                        <option>Yüksek Öğrenim</option>
+                        <option>Yüksek lisans</option>
+                        <option>Doktora</option>
+                    </select><br/><br/>
+                    <label for="diller">Bildiğiniz Diller</label> <br/>
+                    <textarea id="diller" placeholder="Seviyenizi belirtiniz"></textarea> <br/><br/> 
+                </fieldset>
+     
+        </fieldset>
+        <br/><br/><br/>
+        <fieldset><legend>Kurs Bilgileri</legend>
+            <label class="branch">İlgilendiklerinizi Seçiniz:</label> <br/>
+            <input type="checkbox" id="art" class="branch"> Sanat
+            <input type="checkbox" id="science"class="branch">Bilim ve Teknik
+            <input type="checkbox" id="social"class="branch">Sosyal Faaliyetler
+            <input type="checkbox" id="diğer"class="branch"> Diğer<br/><br/>
+            <label class="saat">Hangi zaman aralığında katılmayı tercih edersiniz?</label> <br/>
+            <input type="radio" name="seçim" value="sabah" class="saat"> 09.00-11.59 am
+            <input type="radio" name="seçim" value="öğlen" class="saat">12.00-14.59 pm
+            <input type="radio" name="seçim" value="ikindi" class="saat">16.00-18.59 pm <br/><br/>
+            <label for="öğretmen">İstediğiniz Öğretmeni seçebilirsiniz</label><br/>
+            <select id="öğretmen">
+                <option value="-">Fark etmez</option>
+                <optgroup label="Sanat">    
+                    <option value="Ahmet">Ahmet</option>
+                    <option value="Ayşe">Ayşe</option>
+                </optgroup>
+                <optgroup label="Bilim ve Teknik">
+                    <option value="Marry">Marry</option>
+                    <option value="David">David</option>
+                </optgroup>
+                <optgroup label="Sosyal Faaliyetler">    
+                    <option value="Jasmine">Jasmine</option>
+                    <option value="Hatice">Hatice</option>
+                </optgroup>
+            </select><br/><br/>
+            <label for="istekler"></label>
+            <textarea id="istekler" placeholder="İstek ve önerilerinizi belirtebilirsiniz"></textarea>
+
+
+        </fieldset>
+    </form>
+    <br><br><br>
+    <fieldset>
+    <table><caption>Kursiyer Bilgileri</caption>
+        <thead>
+            <tr>
+                <th>Ad</th> 
+                <th>Kurs saati</th>
+                <th>Branş</th>
+                <th>Öğretmeni</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Büşra</td>
+                <td>09.00-11.59</td>
+                <td>Bilim ve Teknik</td>
+                <td>David</td>
+            </tr>
+            <tr>
+                <td>Neslihan</td>
+                <td>09.00-11.59</td>
+                <td>Sosyal Faaliyetler</td>
+                <td>Hatice</td>
+            </tr>
+            <tr>
+                <td>Neda</td>
+                <td>16.00-18.59</td>
+                <td>Sanat</td>
+                <td>Ahmet</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </fieldset>
+
+
+</body>
+</html>
