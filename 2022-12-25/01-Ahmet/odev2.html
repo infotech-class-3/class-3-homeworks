@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe_2</title>
+</head>
+<body>
+    <h1 align="center" >WILLKOMMEN AUF DER REGISTRIERUNGSEITE FÜR DEN PROGRAMMKURS</h1>
+    <img src="photo.jpeg" alt="photo" width="100px">
+    <br>
+    <br>
+    <form method="post" action="#">
+        <fieldset>
+            <br>
+            <br>
+            <br>
+            <legend align="center">1. Abscnitt</legend>
+            <label for="name">Vorname</label>
+            <input type="text" id="name">
+
+            <label for="surname">Name</label>
+            <input type="text" id="surname">
+
+            <label for="geb dat">Geb_Datum</label>
+            <input type="date" id="geb_dat">
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email">
+
+            <label for="tel">Telefon</label>
+            <input type="number" id="tel">
+            <br>
+            <br>
+            <br>
+<br>Bitte wählen Sie Ihre Geschlechte aus</br>
+            <input type="radio" name="mann" id="eng">Männlich <br>
+            <input type="radio" name="frau" id="de">Weiblich <br>
+            <br>
+    Bitte wählen Sie Ihren Bildungsstand aus
+    <select name="Bildungsstatus">
+        <option value="lis">Lizenz</option>
+        <option value="mas">Master</option>
+        <option value="pro">Promotion</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post" action="#">
+        <fieldset>
+            <legend align="center">2. Abscnitt</legend>
+<br>
+<br>Bitte wählen Sie Ihre Fremdsprache aus</br>
+<input type="radio" name="spra" id="eng">English <br>
+<input type="radio" name="spra" id="de">Deutsch <br>
+<input type="radio" name="spra" id="fra">Frankreich <br>
+    <br>Bitte wählen Sie das Programm aus</br>
+            <input type="checkbox" name="prog" id="java">Java <br>
+            <input type="checkbox" name="prog" id="python">Python <br>
+            <input type="checkbox" name="prog" id="c++">C++ <br>
+    <br>Bitte wählen Sie Ihr Niveau aus</br>
+    <select name="niveau" multiple>
+        <option value="anfang">Anfang</option>
+        <option value="mitte">Mitte</option>
+        <option value="gut">Gut</option>
+    </select>
+    <br>
+    <br>
+   
+    <br>
+    <br> Bitte geben Sie an, ob Sie eine besondere Situation haben</br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <div align="center">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </div>
+
+    </form>
+    <br><br>
+    <table align="center" border="1">
+        <thead>
+            <tr  bgcolor="gray">
+                <th>Vorname</th>
+                <th>Name</th>
+                <th>Geb_Datum</th>
+                <th>E-Mail</th>
+                <th>Telefon</th>
+                <th>Geschlechte</th>
+                <th>Bildungstand</th>
+                <th>Fremdsprache</th>
+                <th>Programm Name</th>
+                <th>Programm Niveu</th>
+                <th>Erläuterung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmet</td>
+                <td>Yildirim</td>
+                <td>10.06.1982</td>
+                <td>ay@mail.com</td>
+                <td>555333</td>
+                <td>Männlich</td>
+                <td>Lizenz</td>
+                <td>Englisch</td>
+                <td>Java</td>
+                <td>Mitte</td>
+                <td>Abend ist frei</td>
+              
+            </tr>
+            <tr>
+                <td>Nil Bahar</td>
+                <td>Yildirim</td>
+                <td>11.11.1992</td>
+                <td>ny@mail.com</td>
+                <td>444333</td>
+                <td>Weiblich</td>
+                <td>Master</td>
+                <td>Englisch</td>
+                <td>Python</td>
+                <td>Anfang</td>
+                <td>frei</td>
+            </tr>
+            <tr>
+                <td>Burak</td>
+                <td>Yildirim</td>
+                <td>22.03.2002</td>
+                <td>by@mail.com</td>
+                <td>333222</td>
+                <td>Männlich</td>
+                <td>Lizenz</td>
+                <td>Deutsch</td>
+                <td>c++</td>
+                <td>Gut</td>
+                <td>Mittag ist frei</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
