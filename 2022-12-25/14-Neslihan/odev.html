@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>My HTML Homework </title>
+</head>
+<body>
+    <h1> OGRENCI/KURSIYER KAYIT FORMU </h1>
+<br/>
+<br/>
+    <img alt="resim"src="vesikalik.jpg"/>
+<br/>
+<br/>
+<form method="post" action="#">
+    <fieldset>
+        <legend>Ogrenci Bilgileri</legend>
+        <label for="name">Adi</label>
+        <input type="text" id="name"/>
+<br/>
+<br/>
+        <label for="soyadi">Soyadi</label>
+        <input type="text" id="soyadi"/>
+<br/> 
+<br/>
+        <label for="email">Email</label>
+        <input type="email" id="email"/>
+<br/>
+<br/>
+        <label for="tel">Telefon Numarasi</label>
+        <input type="tel"id="tel"/>
+<br/>
+<br/>
+        <label for="date">Dogum Tarihi</label>
+        <input type="date"id="date"/>
+<br/>
+<br/>
+        <label for="DogumYeri">Dogum Yeri</label>
+        <input type="text" id="DogumYeri"/>
+<br/>
+<br/>
+         Bildiginiz Diller
+<br/>
+        <input type="checkbox" name="dil" id="ing"/>Ingilizce
+        <input type="checkbox" name="dil" id="Alm"/>Almanca 
+        <input type="checkbox" name="dil" id="Fra"/>Fransizca
+        <input type="checkbox" name="dil" id="Diger"/>Diger <input type="text"id="diger"/>
+<br/>
+<br/>
+    Ogrenım Durumu
+<br/>
+        <input type="checkbox" name="ögr" id="ilkogretim"/>Ilkogretim
+        <input type="checkbox" name="ögr" id="ortaogretim"/>Ortaogretim
+        <input type="checkbox" name="ögr" id="onlisans"/>Onlisans
+        <input type="checkbox" name="ögr" id="lisans"/>Lisans
+        <input type="checkbox" name="ögr" id="YuksekLisans"/>YuksekLisans
+        <input type="checkbox" name="ögr" id="Doktora"/>\Doktora
+
+<br/>
+<br/>
+    </fieldset>
+</form>
+<br/>
+<br/>
+
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Kurs Bilgileri</legend>
+            Egitim Dili Tercihi
+            <select name="dil">
+            <option value="Ing"selected>Ingilizce</option>
+            <option value="Alm">Almanca</option>
+            <option value="Fra">Fransizca</option>
+            </select>
+
+<br/>
+<br/>
+            Daha once bu alanda bır egıtım aldınız mı
+<br/>
+            <input type="radio" name="secim" value="evet"/>Evet <br/>
+            <input type="radio" name="secim" value="hayir"/>Hayir <br/>
+<br/>
+<br/>
+
+    Katilmak istediginiz kurs/egitim programini seciniz:
+<br/>
+<br/>
+    <input type="checkbox" name="kursturu" id="Full Stack Web"/>Full Stack Web Development
+    <input type="checkbox" name="kursturu" id="Python Data Science"/>Python Data Science
+    <input type="checkbox" name="kursturu" id="Automotion Engineering"/>Full Stack Automotion Engineering
+    <input type="checkbox" name="kursturu" id="Cyber Security"/>Cyber Security
+
+<br/>
+<br/>
+
+<textarea cols="100" cows="50">
+    Buraya iletmek istediginiz mesajinizi giriniz.
+</textarea>
+
+
+        </fieldset>
+    </form>
+<br/>
+<br/>
+
+    <input type="submit" value="Kaydet"/>
+    <input type="reset" value="Temizle"/>
+<br/>
+<br/>
+
+    <table>
+        <thead>
+            <tr>
+                <th id="th1">Isim</th>
+                <th id="th1">soyisim</th>
+                <th id="th1">Bildigi Diller </th>
+                <th id="th1">Kurs/Egitim Icin Tercih Ettigi Dil</th>
+                <th id="th1">Alanla Ilgili Gecmis Tecrube/Egitim Bilgisi</th>
+                <th id="th1">E mail adresi</th>
+                <th id="th1">ogrenim durumu </th>
+                
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Neslihan</td>
+                <td>Utuk</td>
+                <td>Ingilizce</td>
+                <td>Ingilizce</td>
+                <td>Hayir</td>
+                <td>nesli@gmail.com</td>
+                <td>Lisans</td>
+            </tr>
+
+    <br/>
+    
+            <tr>
+                <td>Yasin</td>
+                <td>Utuk</td>
+                <td>Ingilizce</td>
+                <td>Ingilizce</td>
+                <td>evet</td>
+                <td>yasin@gmail.com</td>
+                <td>Lisans</td>
+            </tr>
+
+        <br/>
+            <tr>
+                <td>zeynep</td>
+                <td>utuk</td>
+                <td>Fransizca</td>
+                <td>Ingilizce</td>
+                <td>hayir</td>
+                <td>zeynep@gmail.com</td>
+                <td>Doktora</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+
+    
+</body>
+</html>

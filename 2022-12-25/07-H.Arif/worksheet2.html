@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. WORKSHEET</title>
+</head>
+<body>
+    <h1 align="center">WELCOME TO LANGUAGE COURSE REGISTRATION PAGE</h1>
+    <img src="language.jpg" width="160" height="90"/>
+    <form action="#" method="post">
+        <fieldset>
+            <legend align="center" style="font-size: 24px;"><b>Personal Information</b></legend>
+            <table>
+                <tr>
+                    <td><label for="name"><b>Name: </b></label><input type="text" id="name"/></td>
+                    <td><label for="lastname"><b>Last Name: </b></label><input type="text" id="lastname"/></td>
+                    <td><label><b>Country: </b></label>
+                        <select name="select" id="country">
+                            <option value="germany">Germany</option>
+                            <option value="nederlands">Nederlands</option>
+                            <option value="belgium">Belgium</option>
+                            <option value="france">France</option>
+                            <option value="other">Other</option>
+                        </select>
+                    <td><label for="bdate"><b>Birthday: </b></label><input type="date" id="bdate"/></td>
+                </tr>
+                <tr>
+                    <td><label><b>Gender: </b></label>
+                        <input type="radio" name="select" id="gender"/>Male
+                        <input type="radio" name="select" id="gender"/>Female
+                    </td>
+                    <td><label for="tel"><b>Telephone: </b></label><input type="tel" id="tel"/></td>
+                    <td><label for="email"><b>E-Mail: </b></label><input type="email" id="email"/></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset>
+            <legend align="center" style="font-size: 24px;"><b>Course Information</b></legend>
+            <table>
+                <tr>
+                    <td><label><b>Course Name: </b></label><br>
+                        <input type="radio" name="select" value="english"/>English
+                        <input type="radio" name="select" value="deutsch"/>Deutsch
+                        <input type="radio" name="select" value="french"/>French
+                        <input type="radio" name="select" value="dutch"/>Dutch
+                    </td>
+                    <td></td>
+                    <td><label ><b>Course Level: </b></label><br>
+                        <input type="checkbox" id="a1"/>A1
+                        <input type="checkbox" id="a2"/>A2
+                        <input type="checkbox" id="b1"/>B1
+                        <input type="checkbox" id="b2"/>B2
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label><b>Available Date: </b></label>
+                        <select>
+                            <option value="date1">22.02.2023</option>
+                            <option value="date2">22.03.2023</option>
+                            <option value="date3">22.04.2023</option>
+                            <option value="date4">22.05.2023</option>
+                            <option value="date5">22.06.2023</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td><label for="motivation"><b>Motivation Letter: </b></label><textarea></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        <div align="center">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </div>
+        
+    </form>
+    <br><br>
+    <table align="center" border="1">
+        <thead>
+            <tr  bgcolor="gray">
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Country</th>
+                <th>Birthday</th>
+                <th>Gender</th>
+                <th>Telephone</th>
+                <th>E-Mail</th>
+                <th>Course Name</th>
+                <th>Course Level</th>
+                <th>Available Date</th>
+                <th>Motivation</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ali</td>
+                <td>TUNA</td>
+                <td>Nederlands</td>
+                <td>10.03.1995</td>
+                <td>Male</td>
+                <td>00312345676</td>
+                <td>ali@simple.com</td>
+                <td>Deutsch</td>
+                <td>A2</td>
+                <td>22.03.2023</td>
+                <td>Ali is a student</td>
+            </tr>
+            <tr>
+                <td>Deniz</td>
+                <td>TOPRAK</td>
+                <td>Germany</td>
+                <td>29.09.2002</td>
+                <td>Female</td>
+                <td>00492235676</td>
+                <td>deniz@simple.com</td>
+                <td>Dutch</td>
+                <td>B1</td>
+                <td>22.05.2023</td>
+                <td>Deniz is a intelligent student</td>
+            </tr>
+            <tr>
+                <td>Kaya</td>
+                <td>DEMIR</td>
+                <td>Belgium</td>
+                <td>12.06.1986</td>
+                <td>Male</td>
+                <td>00322345676</td>
+                <td>kaya@simple.com</td>
+                <td>French</td>
+                <td>A1</td>
+                <td>22.02.2023</td>
+                <td>Kaya is a worker</td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+
+</body>
+</html>
