@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_Student</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <h1 style="text-align:center">Ögrenci Kayit Formu</h1>
+
+    <img src="A_ögr_foto.png" alt="Ögrenci_Foto" width="100" height="120">
+    
+    <br/><br/>
+<!--Ögrencinin bilgileri-->    
+    <form action="">
+        <fieldset>
+            <legend style="text-align:center">Ögrenci Bilgileri</legend><br>
+<label for="">Ad Soyad </label>
+<input type="text" value="Ad Soyadi giriniz...">
+
+<label for="">Dogum Tarihi  </label>
+<input type="date">
+
+<label for="">Dogum Yeri</label>
+<input type="text" value="Dogum yerini giriniz...">
+
+<label for="">E-Mail</label>
+<input type="email" name="" id="" value="EMail giriniz"><br><br>
+
+<label for="">Cinsiyet</label>
+<select name="" id="">
+    <option value="erkek">Erkek</option>
+    <option value="kiz">Kiz</option>
+</select>
+
+<label for="">Telefon</label>
+<input type="tel" name="" id="" value="Tel giriniz">
+
+<label for="">Ögrenim Durumu</label>
+<select name="" id="">
+    <option value="aktiv">Aktif</option>
+    <option value="mezun">Mezun</option>
+</select>
+
+<label for="">Yabanci Dil Durumu</label>
+<select name="" id="">
+    <option value="eng">Ingilizce</option>
+    <option value="eng">Türkce</option>
+    <option value="eng">Almanca</option>
+    <option value="eng">Cince</option>
+</select>
+        </fieldset><br><br>
+
+<!--Ögrencinin basvuru bilgileri-->
+        <fieldset>
+            <legend style="text-align: center;">Basvuru Bilgileri</legend>
+<fieldset >
+    <legend style="text-align: left;">IT Kurslari</legend>
+    <input type="checkbox" name="HTML" id=""value="HTML">
+    <label for="">HTML</label>
+    <input type="checkbox" name="CSS" id=""value="CSS">
+    <label for="">CSS</label>
+    <input type="checkbox" name="JS" id=""value="JS">
+    <label for="">JS</label>
+</fieldset> <br><br>   
+
+<fieldset>
+    <legend style="text-align: left;">Sanat Kurslari</legend>
+    <input type="radio">
+    <label for="">Ahsap</label>
+    <input type="radio">
+    <label for="">Metal</label>
+</fieldset><br><br>
+<fieldset>
+    <legend style="text-align: left;">Spor Kurslari</legend>
+    <select name="" id="">
+        <optgroup label="Uzakdagi">
+            <Option value="karate">Kkarate</Option>
+            <Option value="Judo">Judo</Option>
+            <Option value="Aikido">Aikido</Option>
+        </optgroup>
+        <optgroup label="Ata Sporlari">
+            <Option value="güres">Güres</Option>
+            <Option value="cirit">Cirit</Option>
+        </optgroup>
+
+        
+    
+    </select><br><br>
+    <textarea name="" id="" cols="30" rows="3">Saglik Durumu</textarea>
+</fieldset><br><br>
+
+<!--Ögrenci Verileri Table-->
+<caption>Ögrenci Verileri Tablosu</caption>
+    <table style="border: 1px solid darkslategrey;">
+        <thead >
+            <th>Ad Soyad</th>
+            <th>Dogum Tarihi</th>
+            <th>E_mail</th>
+            <th>Dogum Yeri</th>
+            <th>Tel. Nu</th>
+            <th>Cinsiyet</th>
+            <th>Ögrenim Durumu</th>
+            <th>Yabanci Dil</th>
+            <th>IT Kurs</th>
+            <th>Sanat Kurs</th>
+            <th>Spor Kurs</th>
+        </thead>
+
+        <tbody>
+            <tr><td>Alp Mehmet</td> 
+            <td>10.10.2000</td> 
+            <td>alp@gmail.com</td>
+            <td>Almanya</td> 
+            <td>123456789</td>
+            <td>Erkek</td>
+            <td>Aktif</td>
+            <td>Ing</td>
+            <td>HTML</td>
+            <td>Ahsap</td>
+            <td>karate</td>
+        </tr>
+
+            <tr><td>Ayse Panter</td> 
+                <td>15.12.2003</td> 
+                <td>ayse@gmail.com</td>
+                <td>Malezya</td> 
+                <td>123456789</td>
+                <td>Kadin</td>
+                <td>Aktif</td>
+                <td>Ing</td>
+                <td>JS</td>
+                <td>Ahsap</td>
+                <td>Aikido</td>
+            </tr>
+
+                <tr><td>Mehmet aslan</td> 
+                    <td>11.1.2004</td> 
+                    <td>amehmet@gmail.com</td>
+                    <td>Gana</td> 
+                    <td>123456789</td>
+                    <td>Erkek</td>
+                    <td>Mezun</td>
+                    <td>Cince</td>
+                    <td>CSS</td>
+                    <td>Metal</td>
+                    <td>Gures</td>
+                </tr>
+        </tbody>
+    </table>
+
+    
+
+        </fieldset>
+    </form>
+</body>
+</html>
