@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs basvurusu</title>
+</head>
+<body >
+    
+    <table align="center" width="70%" border="0">
+    <h1 align="center">KURS BAŞVURU FORMU</h1>
+    <img src="/resim.jpg" alt="" width="150 ">
+<form>
+    <fieldset>
+        <legend  align="center"> <b> Öğrenci Bilgileri </b></legend>   
+
+         Adı : <input type="text"  id="ad" placeholder="adınızı giriniz" required>
+         Soyadı: <input type="text" id="soyad" placeholder="soyadınızı giriniz" required>
+         Doğum Tarihi: <input type="date" id="dogum" required>
+
+        <p>Doğum yeri: <select name="sehir" required >
+            <option value="">seçiniz</option>
+            <option value="">istanbul</option>
+            <option value="">ankara</option>
+            <option value="">kayseri</option>
+            <option value="">antalya</option>
+            <option value="">mardin</option>
+            <option value="">konya</option>
+            <option value="">izmir</option>
+        </select> 
+
+          email :   <input type="email" id="email" placeholder="email adresini giriniz" required>
+          şifre :   <input type="password" placeholder="şifre giriniz"  >
+          telefon numarası: <input type="number" name="tel" id="tel" placeholder="telefon numarası giriniz" required> 
+
+         Ögrenim Durumu: <select name="egitim" required >
+            <option value="">seçiniz</option>
+            <option value="">ilkokul</option>
+            <option value="">ortaokul</option>
+            <option value="">lise</option>
+            <option value="">ön lisans</option>
+            <option value="">lisans</option>
+            <option value="">yüksek lisans</option>
+            <option value="">Doktora</option>
+        </select> 
+        
+
+        
+        <p>
+        Yabancı Dil:
+
+        <input type="checkbox"> ingilizce
+        <input type="checkbox"> almanca
+        <input type="checkbox"> fransızca
+        <input type="checkbox"> çince
+        <input type="checkbox"> rusca
+        <input type="checkbox"> italyanca
+
+
+
+
+    </p>
+
+    cinsiyet: <input type="radio" name="cinsiyet" id="cinsiyet" required> erkek
+                    <input type="radio" name="cinsiyet" id="cinsiyet" required> kadın
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend align="center"> <b>Kurslar Bilgileri </b></legend>
+         <b>  ÖĞRENİLECEK DİL SEÇİNİZ: </b><br><br>
+         <input type="radio" name="kurs">İngilizce
+        <input type="radio" name="kurs"> Almanca
+        <input type="radio" name="kurs">Fransızca
+         <input type="radio" name="kurs">İtalyanca
+
+        <p>
+            <b> Öğrenilecek Dil seviyesi: </b>
+
+             <input type="checkbox">A1
+             <input type="checkbox">A2
+             <input type="checkbox"> B1
+             <input type="checkbox">B2
+             <input type="checkbox">C1
+             <input type="checkbox">C2
+        </p>
+
+        <p>Diğer Bilgiler: </p>
+        <textarea name="bilgi" id="bilgi" cols="55" rows="4" placeholder="iletmek istediginiz mesajınızı yazabilirsiniz zorunlu alan değildir"></textarea>
+       
+    </fieldset>
+    <br>
+
+    <button type="submit">KAYDET</button>
+    <button type="reset">TEMİZLE</button>
+
+</table>
+
+<br><br>
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <th>ADI</th>
+            <th>SOYADI</th>
+            <th>DOĞUM TARİHİ</th>
+            <th>DOĞUM YERİ</th>
+            <th>EMAİL</th>
+            <th>TELEFON</th>
+            <th>EĞİTİM DURUMU</th>
+            <th>YABANCI DİL BİLGİSİ</th>
+            <th>CİNSİYET</th>
+            <th>KURS BİLGİLERİ</th>
+            <th>KURS SEVİYESİ</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Mustafa</td>
+            <td>Dag</td>
+            <td>13.05.1991</td>
+            <td>kayseri</td>
+            <td>mustafadagda@gmail.com</td>
+            <td>5352562152</td>
+            <td>lisans</td>
+            <td>ingilizce</td>
+            <td>erkek</td>
+            <td>fransızca</td>
+            <td>a2</td>
+            
+        </tr>
+        <tr>
+            <td>vasfiye</td>
+            <td>Dag</td>
+            <td>13.05.1988</td>
+            <td>kayseri</td>
+            <td>vasfiyedag@gmail.com</td>
+            <td>5352566556</td>
+            <td>lise</td>
+            <td>almanca</td>
+            <td>kadın</td>
+            <td>almanca</td>
+            <td>c1</td>
+            
+        </tr>
+        <tr>
+            <td>elif</td>
+            <td>güneş</td>
+            <td>3.02.2005</td>
+            <td>mardin</td>
+            <td>elifgunes@gmail.com</td>
+            <td>5565525152</td>
+            <td>ön lisans</td>
+            <td>italyanca</td>
+            <td>kadın</td>
+            <td>ingilizce</td>
+            <td>c1</td>
+            
+        </tr>
+
+    </tbody>
+</table>
+
+
+<br>
+
+    
+
+</form>
+
+
+
+
+</body>
+</html>
