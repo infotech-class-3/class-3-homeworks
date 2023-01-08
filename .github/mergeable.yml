@@ -11,12 +11,3 @@ mergeable:
         must_exclude:
           regex: "\\[?\\s\\]"
           message: "Aciklamalardaki tüm checkbox lar isaretlenmelidir."
-  - when: schedule.repository
-    validate:
-      - do: stale
-        days: 20
-        type: pull_request
-    pass:
-      - do: comment
-        payload:
-          body: This is old. Is it still relevant?
