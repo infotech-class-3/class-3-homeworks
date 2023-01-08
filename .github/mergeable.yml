@@ -1,0 +1,22 @@
+version: 2
+mergeable:
+  - when: pull_request.*
+    validate:
+      - do: label
+        must_exclude:
+          regex: "(WIP|is blocked|do-not-merge)"
+      - do: description
+        no_empty:
+          enabled: true
+        must_exclude:
+          regex: "\\[?\\s\\]"
+          message: "Aciklamalardaki tüm checkbox lar isaretlenmelidir."
+  - when: schedule.repository
+    validate:
+      - do: stale
+        days: 20
+        type: pull_request
+    pass:
+      - do: comment
+        payload:
+          body: This is old. Is it still relevant?
