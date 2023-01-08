@@ -1,5 +1,7 @@
 ## Description
 
+- Kisa aciklama
+
 ## Checklist
 
 - [ ] Pull request basligi, '00-Alex - html ödev' seklinde düzenlendi
