@@ -10,7 +10,7 @@ mergeable:
           enabled: true
         must_exclude:
           regex: "\\[?\\s\\]"
-          message: "Aciklamalardaki tüm checkbox lar isaretlenmelidir."
+          message: "Aciklamalardaki tüm checkbox lar isaretlenmelidir!"
   - when: schedule.repository
     validate:
       - do: stale
