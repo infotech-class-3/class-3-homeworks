@@ -6,42 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worksheet_CSS</title>
     <style>
-        @media (max-width:1024px){
-            body{
-                background-image: url("./img/cherry_tree.jpg");
-            }
-                
-           /* .container{
-                display: grid;
-                grid-template-columns: 100%;
-                grid-template-rows: auto 75px 200px 75px 75px;
-                grid-template-areas:"logo"
-                                    "navbar"
-                                    "aside1"
-                                    "main"
-                                    "section"
-                                    "footer";
-            } */
-            .header{
-                display: flex;
-                flex-wrap: wrap;
-                box-sizing: border-box;
-            }
-            .main{
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .aside2{
-                display: none;
-            }
-            .section{
-                display: block;
-            }
-            .footer{
-                display:block;
-            }
-        } 
-       
         .container{
             height: 740px;
             display: grid;
@@ -80,7 +44,6 @@
             grid-area: navbar;
         }
         .navbar h4:hover{
-            /* background-color:rgb(234, 212, 180); */
             font-size:larger;
             color:red;
             transform:rotate3d(1,2,1,20deg);
@@ -110,6 +73,41 @@
             background-color:darkgrey;
             border-radius: 5px;
         }
+        @media (max-width:1024px){
+            body{
+                background-image: url("./img/cherry_tree.jpg");
+            }
+                
+           .container{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 20% 75px 200px 75px 75px;
+                grid-template-areas:"header"
+                                    "aside1"
+                                    "main"
+                                    "section"
+                                    "footer";
+            }
+            .header{
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+            }
+            .main{
+                display: grid;
+                
+            }
+            .aside2{
+                display: none;
+            }
+            .section{
+                display: grid;
+            }
+            .footer{
+                display:grid;
+            }
+          
+        } 
     </style>
 </head>
 <body>
