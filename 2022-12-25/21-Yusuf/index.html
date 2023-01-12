@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="azure">
+    <h1 align="center">Registration Form</h1>
+    <img
+      src="icon-custom-coding.svg"
+      alt="Custom-Coding-Icon"
+      width="48"
+      height="48"
+    />
+    <form>
+      <fieldset>
+        <legend align="center">Personal data</legend>
+        <label>First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          placeholder="Enter your first name"
+          size="25"
+        />
+        <label>Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Enter your last name"
+          size="25"
+        />
+        <br />
+        <br />
+        <label>Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          size="25"
+        />
+        <label>Telephone</label>
+        <input
+          type="tel"
+          id="tel"
+          placeholder="Enter your phone number"
+          size="25"
+        />
+        <br /><br />
+        <label>Birthday</label>
+        <input type="date" id="date" />
+        <label>Place of birth</label>
+        <input
+          type="text"
+          id="placeBirth"
+          placeholder="Enter your place of birth"
+          size="25"
+        />
+        <br /><br />
+        <datalist id="gender">
+          <option value="Male"></option>
+          <option value="Female"></option>
+          <option value="Other"></option>
+        </datalist>
+        <label>Select your gender</label>
+        <input list="gender" /><br />
+        <br />
+        <br />
+      </fieldset>
+    </form>
+    <br />
+    <br />
+    <form>
+      <fieldset>
+        <legend align="center">Course application data</legend>
+        <datalist id="langs">
+          <option value="English"></option>
+          <option value="German"></option>
+          <option value="Spanish"></option>
+          <option value="Italien#"></option>
+          <option value="Chinese"></option>
+        </datalist>
+        <label>Select your preferred foreign language</label>
+        <input list="langs" />
+
+        <label>Select your confidence</label>
+        <input type="radio" id="beginner" name="confidence" value="beginner" />
+        Beginner
+        <input
+          type="radio"
+          id="intermediate"
+          name="confidence"
+          value="intermediate"
+        />
+        Intermediate
+        <input type="radio" id="advance" name="confidence" value="advance" />
+        Advance<br />
+        <label>Select your preferred programming languages </label><br />
+        <input type="checkbox" id="jv" /> Java<br />
+        <input type="checkbox" id="js" /> JavaScript<br />
+        <input type="checkbox" id="c#" /> C#<br />
+        <input type="checkbox" id="ph" /> PHP<br />
+        <br />
+        <br />
+        <textarea
+          cols="50"
+          rows="10"
+          placeholder="Please enter your comments here."
+        ></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Submit" id="submit" />
+        <input type="reset" value="Reset" id="reset" /><br />
+      </fieldset>
+    </form>
+    <br />
+    <br />
+    <table align="center" frame="border">
+      <caption>
+        <strong>Members</strong>
+      </caption>
+      <thead><tr><th title="Field #1">First name</th>
+        <th title="Field #2">Last name</th>
+        <th title="Field #3">Email</th>
+        <th title="Field #4">Telephone</th>
+        <th title="Field #5">Birthday</th>
+        <th title="Field #6">Place of birth</th>
+        <th title="Field #7">Gender</th>
+        <th title="Field #8">Language</th>
+        <th title="Field #9">Notes</th>
+        </tr></thead>
+        <tbody><tr>
+        <td>Talbot</td>
+        <td>Fishwick</td>
+        <td>tfishwick0@tinyurl.com</td>
+        <td>206-272-9887</td>
+        <td>8/9/2022</td>
+        <td>Agen</td>
+        <td>Male</td>
+        <td>Afrikaans</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Carissa</td>
+        <td>Dougher</td>
+        <td>cdougher1@addthis.com</td>
+        <td>835-106-3431</td>
+        <td>6/9/2022</td>
+        <td>Curuzú Cuatiá</td>
+        <td>Female</td>
+        <td>Romanian</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Danila</td>
+        <td>Burnand</td>
+        <td>dburnand2@arstechnica.com</td>
+        <td>104-681-7955</td>
+        <td>1/7/2022</td>
+        <td>Palampal</td>
+        <td>Female</td>
+        <td>Māori</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Latisha</td>
+        <td>Ivachyov</td>
+        <td>livachyov3@sourceforge.net</td>
+        <td>180-438-6005</td>
+        <td>4/13/2022</td>
+        <td>Panolan</td>
+        <td>Female</td>
+        <td>Guaraní</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Della</td>
+        <td>Cadigan</td>
+        <td>dcadigan4@wikipedia.org</td>
+        <td>438-127-0534</td>
+        <td>9/7/2022</td>
+        <td>Guimarães</td>
+        <td>Female</td>
+        <td>Pashto</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Joann</td>
+        <td>Merit</td>
+        <td>jmerit5@github.io</td>
+        <td>612-433-5259</td>
+        <td>3/7/2022</td>
+        <td>Masku</td>
+        <td>Female</td>
+        <td>Dhivehi</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Kimmie</td>
+        <td>Yearns</td>
+        <td>kyearns6@squarespace.com</td>
+        <td>573-452-7280</td>
+        <td>12/3/2022</td>
+        <td>Maciejowice</td>
+        <td>Genderfluid</td>
+        <td>Romanian</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Xylia</td>
+        <td>Roskelly</td>
+        <td>xroskelly7@harvard.edu</td>
+        <td>656-446-2174</td>
+        <td>2/11/2022</td>
+        <td>Thanh Chương</td>
+        <td>Female</td>
+        <td>Bosnian</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Fidelia</td>
+        <td>Apark</td>
+        <td>fapark8@qq.com</td>
+        <td>528-232-2540</td>
+        <td>7/26/2022</td>
+        <td>Okocim</td>
+        <td>Female</td>
+        <td>Danish</td>
+        <td> </td>
+        </tr>
+        <tr>
+        <td>Marietta</td>
+        <td>Arno</td>
+        <td>marno9@opensource.org</td>
+        <td>502-355-8681</td>
+        <td>3/22/2022</td>
+        <td>Xiangdian</td>
+        <td>Female</td>
+        <td>Hindi</td>
+        <td> </td>
+        </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
