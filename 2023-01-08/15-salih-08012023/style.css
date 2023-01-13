@@ -1,0 +1,47 @@
+
+.nav{
+    display: flex;
+
+}
+nav > *{
+    flex-grow: 1;
+}
+
+#header{
+    background-color: orange;
+    width: 100%;
+    height: 50px;
+}
+.hover{
+    background-color: gray;
+    height: 50px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container{
+    display: grid;
+    grid-template-columns: 70% 30% repeat(1, auto);
+
+}
+.box1{
+    background-color: rgb(161, 161, 77);
+    width: 70%;
+    height: 300px;
+}
+.paragraph{
+    text-indent: 5%;
+    text-align: justify;
+}
+.img{
+    margin: 10px 10px 10px 160px;
+}
+.box2{
+    background-color: blue;
+    height: 400px;
+}
+.box3{
+    background-color: aqua;
+    width: 35%;
+}
