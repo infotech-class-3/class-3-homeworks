@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" width="104" height="142">
+    <h1 align="center" >KURSİYER KAYIT FORMU</h1>
+    
+    <br>
+    <br>
+    <form method="post" action="#">
+        <fieldset>
+            <br>
+            <br>
+            <legend align="center">KİŞİSEL BİLGİLER</legend>
+            <label for="name">AD</label>
+            <input type="text" id="name">
+
+            <label for="surname">SOYAD</label>
+            <input type="text" id="surname">
+
+            <label for="geb dat">D.TARİHİ</label>
+            <input type="date" id="geb dat">
+
+            <label for="email">E-MAİL</label>
+            <input type="email" id="email">
+
+            <label for="tel">TELEFON</label>
+            <input type="number" id="tel">
+            <br>
+            <br>
+            <br>
+        CİNSİYETİNİZİ SEÇİNİZ</br>
+            <input type="radio" name="man">BAY<br>
+            <input type="radio" name="woman">BAYAN<br>
+            <input type="radio" name="other">DİĞER<br>
+            <br>
+            EĞİTİM DURUMUNUZ
+    <select name="educ">
+        <option value="lis">LİSANS</option>
+        <option value="mas">MASTER</option>
+        <option value="phd">DOKTORA</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <br>
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post" action="#">
+        <fieldset>
+            <legend align="center">KURS BİLGİLERİ</legend>
+<br>
+<br>ÖĞRENMEK İSTEDİĞİNİZ DİL</br>
+<input type="radio" name="eng" id="eng">İNGİLİZCE <br>
+<input type="radio" name="ita" id="ita">İTALYANCA <br>
+<input type="radio" name="arab" id="arab">ARAPÇA <br>
+    
+
+<br>KURS TÜRÜNÜ SEÇİNİZ</br>
+            <input type="checkbox" name="typ" id="slow">YAVAŞ <br>
+            <input type="checkbox" name="typ" id="semiintensive">ORTA<br>
+            <input type="checkbox" name="typ" id="intensiv">HIZLI <br>
+    <br>DİL SEVİYENİZ</br>
+    <select name="level" multiple>
+        <option value="beg">BAŞLANGIÇ</option>
+        <option value="mid">ORTA</option>
+        <option value="adv">İLERİ</option>
+    </select>
+    <br>
+    <br>
+   
+    <br>
+    <br> EKSTRA AÇIKLAMAK İSTENEN HUSUSLAR</br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <div align="center">
+            <input type="submit" value="ONAY" />
+            <input type="reset" value="İPTAL" />
+        </div>
+
+    </form>
+    <br><br>
+    <table align="center" border="1">
+        <thead>
+            <tr  bgcolor="gray">
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>D.TARİHİ</th>
+                <th>E-MAİL</th>
+                <th>Telefon</th>
+                <th>CİNSİYET</th>
+                <th>EĞİTİM</th>
+                <th>İSTENEN DİL</th>
+                <th>SEVİYE</th>
+                <th>KURS TÜRÜ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AYŞE</td>
+                <td>TEYZE</td>
+                <td>10.05.1979</td>
+                <td>AT@gmail.com</td>
+                <td>11111</td>
+                <td>BAYAN</td>
+                <td>LİSANS</td>
+                <td>ARAPÇA</td>
+                <td>ORTA</td>
+                <td>HIZLI</td>
+              
+            </tr>
+            <tr>
+                <td>AHMET</td>
+                <td>BEYZADE</td>
+                <td>04.11.1990</td>
+                <td>AB@gmail.com</td>
+                <td>999999</td>
+                <td>BAY</td>
+                <td>MASTER</td>
+                <td>İNGİLİZCE</td>
+                <td>ORTA</td>
+                <td>YAVAŞ</td>
+            </tr>
+            <tr>
+                <td>CEMİLE</td>
+                <td>GÜZEL</td>
+                <td>22.03.1985</td>
+                <td>CG@gmail.com</td>
+                <td>1111111</td>
+                <td>BAYAN</td>
+                <td>DOKTORA</td>
+                <td>İTALYANCA</td>
+                <td>İLERİ</td>
+                <td>ORTA</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+
+</body>
+</html>

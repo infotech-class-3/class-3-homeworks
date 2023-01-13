@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ögrenci Kayıt Formu</title>
+</head>
+<body>
+
+	<h1>Ögrenci Kayıt Formu</h1>
+	<br/>
+	
+
+<img src="foto.png"/>
+<br/>
+
+<form>
+	<fieldset>
+	<legend><b>Ögrenci Bilgileri</b></legend>	
+	
+	<label for="name">Ad, Soyad</label><br/>
+	<input type="text" id="name"><br/>	
+	
+	<label for="birthday">Dogum Tarihi</label><br/>
+	<input type="date" id="birthday"><br/>	
+
+	<label for="birth place">Dogum Yeri</label><br/>
+	<input type="text" id="birth place"><br/>
+
+	Cinsiyet<br/>
+	<select>
+		<optgroup label="Cinsiyet">
+				<option value="fem">Kadin</option>
+				<option value="mas">Erkek</option>
+				<option value="empty">Belirtmek Istemiyorum</option>
+			</optgroup>
+		</select>
+	<br/>
+
+	Egitim Seviyesi<br/>
+	<select>
+			<optgroup label="Egitim Seviyesi">
+				<option value="lise">Lise</option>
+				<option value="uni">Universite</option>
+				<option value="lisans">Yüksek Lisans</option>
+			</optgroup>
+	</select><br/>
+	
+	Bildiginiz Diller:<br/>
+	<input type="checkbox" name="ing"/>Ingilizce
+	<input type="checkbox" name="alm"/>Almanca
+	<input type="checkbox" name="fra"/>Fransizca
+	<input type="checkbox" name="ita"/>Italyanca
+	<input type="checkbox" name="isp"/>Ispanyolca
+	<br/><label for="language">Diger:</label>
+	<input type="text" id="language"><br/>
+
+	</fieldset>
+
+<br/>
+
+	<!-- <fieldset>
+	<legend><b>Ögrenci Ebeveyn Bilgileri</b></legend>
+	(18 Yasinin Altindaki Adaylar Icin)<br/>
+
+	<b>Anne:</b><br/>	
+	<label for="name">Ad, Soyad </label><br/>
+	<input type="text" id="name"><br/>	
+	
+	<label for="birthday">Dogum Tarihi</label><br/>
+	<input type="date" id="birthday"><br/>	
+
+	<label for="birth place">Dogum Yeri</label><br/>
+	<input type="text" id="birth place"><br/>
+	<br/>
+	<b>Baba:</b><br/>	
+	<label for="name">Ad, Soyad </label><br/>
+	<input type="text" id="name"><br/>	
+	
+	<label for="birthday">Dogum Tarihi</label><br/>
+	<input type="date" id="birthday"><br/>	
+
+	<label for="birth place">Dogum Yeri</label><br/>
+	<input type="text" id="birth place"><br/>
+	<br/>
+
+	</fieldset> 
+
+<br/>-->
+
+	<fieldset>
+	<legend><b>Iletisim Bilgileri</b></legend>	
+	
+	<label for="adress">Adres:</label><br/>
+	<input type="adress" id="adres"><br/>
+
+	<label for="email">Email:</label><br/>
+	<input type="email" id="email"><br/>
+
+	<label for="tel">Telefon:</label><br/>
+	<input type="tel" id="tel"><br/>
+	</fieldset>
+
+<br/>
+
+	<fieldset>
+		<legend><b>Kursa Iliskin Bilgiler</b></legend>
+
+	<b>Ilgilendiginiz Kurs:</b><br/>
+	<select>
+		<optgroup label="Kurs">
+			<option value="W.D">Web Development</option>
+			<option value="D.S">Data Science</option>
+			<option value="A.E">Automation Engineering</option>
+			<option value="C.S">Cyber Security</option>
+		</optgroup>
+	</select><br/>
+
+	<b>Yazilim alanindaki bilgi seviyeniz:</b><br/>
+	<input type="checkbox" name="html"/>HTML
+	<input type="checkbox" name="python"/>Python
+	<input type="checkbox" name="js"/>Java Script
+	<input type="checkbox" name="css"/>CSS
+	<br/>
+
+	<b>Daha önce bir yazilim kursuna katilmis miydiniz?</b><br/>
+	<input type="radio" name="katilim" value="evet">Evet
+	<input type="radio" name="katilim" value="hayir">Hayir
+	<br/>
+
+	<b>Bu alanda herhangi bir sertifikaniz var mi?</b><br/>
+	<input type="radio" name="sertifika" value="evet">Evet
+	<input type="radio" name="sertifika" value="hayir">Hayir
+	<br/>
+	
+	<label for="dosya"><b>Belgeniz varsa pdf formunda yükleyiniz:</b></label><br/>
+	<input type="file" id="dosya"><br/>	
+	<br/>
+
+	<b>Kursa katilmayi isteme sebebinizi özetle belirtiniz:</b><br/>
+	<textarea cols="50" rows="10"></textarea>
+	<br/><br/>
+
+	</fieldset>
+
+</form>
+
+<br/><br/>
+
+<table>
+	<caption>Ögrenci Bilgileri</caption>
+	<thead>
+		<tr>
+			<th>Ad,Soyad</th>
+			<th>Dogum Tarihi</th>
+			<th>Dogum Yeri</th>	
+			<th>Cinsiyet</th>		
+			<th>Egitim Seviyesi</th>
+			<th>Diller</th>	
+
+		</tr>
+	</thead>
+	<tbody>
+		<td>Fahriyye Evcen</td>
+		<td>06/04/1986</td>
+		<td>Solingen,Almanya</td>	
+		<td>Kadin</td>	
+		<td>Universite</td>	
+		<td>Türkce,Ingilizce,Almanca</td>	
+	</tbody>
+</table>
+
+<br/>
+
+<table>
+	<caption>Iletisim Bilgileri</caption>
+	<thead>
+		<tr>
+			<th>Adres</th>
+			<th>Email</th>
+			<th>Telefon</th>	
+		</tr>
+	</thead>
+	<tbody>
+		<td>Istinye,Istanbul</td>
+		<td>fahriye.evcen@hmail.com</td>
+		<td>0 532 8582343</td>	
+	</tbody>
+</table>
+
+<br/><br/>
+
+<form>
+<input type="submit" value="Gönder"/>
+<input type="reset" value="Verileri Sil"/>
+</form>
+
+</body>
+</html>

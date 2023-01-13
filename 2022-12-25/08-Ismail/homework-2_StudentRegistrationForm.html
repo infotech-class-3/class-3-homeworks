@@ -1,0 +1,199 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h3>Registration Form</h3>
+        </legend>
+
+        <img src="resimalani.png" alt="" />
+        <form action="">
+            <label for="resimekleyin">Resim ekleyin</label>
+            <input type="file" name="resim" id="resim" />
+        </form>
+
+        <div>
+            <fieldset>
+                <legend>Ogrenci Bilgileri</legend>
+                <form action="">
+                    <label for="vorname">Adi Soyadi</label><br />
+                    <input type="text" id="vorname" /><br />
+                    <label for="geburtstag">Dogum Tarihi</label><br />
+                    <input type="date" id="geburtstag" /> <br />
+                    <label for="geburtsort">Dogum Yeri</label><br />
+                    <input type="text" id="geburtsort" /><br />
+                    <label for="email">E-mail</label><br />
+                    <input type="email" id="email" /><br />
+                    <label for="geschlecht">Cinsiyet</label><br />
+                    <select>
+              <option value="select"></option>
+              <option value="Männlich">Erkek</option>
+              <option value="Weiblich">Kadin</option>
+              <option value="Diger">Belirtmek istemiyorum</option></select
+            ><br />
+            <label for="tel">Telefon Numarasi</label><br />
+            <input type="number" id="tel" /><br />
+            <label for="ogrenim_durumu">Egitim Durumu</label><br />
+            <select name="" id="">
+              <option value="select"></option>
+              <option value="ilk">Ilkokul</option>
+              <br />
+              <option value="lise">Lise</option>
+              <br />
+              <option value="Univ">Universite</option>
+              <br />
+              <option value="Yuksek_Lisans">Yuksek Lisans</option>
+              <br />
+              <option value="diger">Diger</option>
+              <br />
+            </select>
+                    <fieldset>
+                        <legend>Yabanci Dil</legend>
+                        <input type="checkbox" id="ing" />Ingilizce
+                        <input type="checkbox" id="fra" /> Fransizca
+                        <input type="checkbox" id="alm" />Almanca
+                    </fieldset>
+                </form>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Kurs Bilgileri</legend>
+                <form action="">
+                    <p>Almak istediginiz kurslari seciniz:</p>
+                    <input type="checkbox" id="müzik" />Müzik <br />
+                    <input type="radio" name="secim" value="gitar" />Gitar
+                    <input type="radio" name="secim" value="piyano" />Piyano <br />
+                    <input type="checkbox" id="spor" />Spor<br />
+                    <input type="radio" name="secim" value="basketbol" />Basketbol
+                    <input type="radio" name="secim" value="tenis" />Tenis <br />
+                    <input type="checkbox" id="it" />Bilgisayar<br />
+                    <input type="radio" name="secim" value="webTasarim" />Web Tasarim
+                    <input type="radio" name="secim" value="yazilim" />Yazilim <br />
+                    <input type="checkbox" id="dil" />Yabancı Dil<br />
+                    <input type="radio" name="secim" value="ing" />Ingilizce
+                    <input type="radio" name="secim" value="alm" />Almanca
+                    <input type="radio" name="secim" value="fra" />Fransizca <br />
+                    <input type="checkbox" id="sinav" />Sinavlara Hazirlik <br />
+                    <input type="radio" name="secim" />Tyt & Ayt
+                    <input type="radio" name="secim" />Etut Kursu<br />
+                    <input type="checkbox" id="yetenek " />Hobi & El Sanatları<br />
+                    <input type="radio" name="secim" />Dikis Nakis
+                    <input type="radio" name="secim" />Origami<br /><br />
+
+                    <span> Kurs saatleri :</span>
+                    <select name="kurssaatleri" id="zaman">
+              <option value="secim">Seciniz</option>
+              <option value="haftasonu">Hafta sonu gunduz</option>
+              <option value="haftasonu">Hafta sonu aksam</option>
+              <option value="haftaici">Hafta ici gunduz</option>
+              <option value="haftaici">Hafta ici aksam</option>
+            </select>
+                    <br /><br />
+                    <textarea name="yorum " id=" " cols="30 " rows="10 ">
+Ozel belirtmek istediginiz bir durum varsa lutfen yaziniz</textarea
+            >
+            <br />
+            <br />
+            <input type="submit" value="kaydet" />
+            <input type="reset" value="temizle" />
+          </form>
+        </fieldset>
+      </div>
+    </fieldset>
+    <br />
+    <div>
+      <table>
+        <caption>
+          Kursiyer Bilgileri
+        </caption>
+        <thead>
+          <tr>
+            <th>Adi Soyadi</th>
+            <th>Dogum Tarihi</th>
+            <th>Dogum Yeri</th>
+            <th>E-mail</th>
+            <th>Cinsiyet</th>
+            <th>Tel No</th>
+            <th>Egitim Durumu</th>
+            <th>Yanaci Dil</th>
+            <th>Kurs Turu-1</th>
+            <th>Kurs Secimi-1</th>
+            <th>Kurs Turu-2</th>
+            <th>Kurs Secimi-2</th>
+            <th>Aciklama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ali Ak</td>
+            <td>14.01.2006</td>
+            <td>ANKARA</td>
+            <td>aliak06@xyz.com</td>
+            <td>Erkek</td>
+            <td>05365874586</td>
+            <td>Lise</td>
+            <td>Ingilizce</td>
+            <td>Sinavlara Hazirlik</td>
+            <td>Tyt & Ayt</td>
+            <td>null</td>
+            <td>null</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          <tr>
+            <td>Selma Gunes</td>
+            <td>25.06.2000</td>
+            <td>Izmir</td>
+            <td>guneselma@xyz.com</td>
+            <td>Kadin</td>
+            <td>05410123456</td>
+            <td>Lisans</td>
+            <td>Yok</td>
+            <td>Hobi & El Sanatlari</td>
+            <td>Dikis Nakis</td>
+            <td>Muzik</td>
+            <td>Piyano</td>
+            <td>Officia omnis doloremque fugiat adipisci</td>
+          </tr>
+          <tr>
+            <td>Hakan Aktas</td>
+            <td>19.11.2010</td>
+            <td>Konya</td>
+            <td>hknaktas41@xyz.com</td>
+            <td>Erkek</td>
+            <td>05336543210</td>
+            <td>Ilkokul</td>
+            <td>Fransizca</td>
+            <td>Spor</td>
+            <td>Tenis</td>
+            <td>Bilgisayar</td>
+            <td>Yazilim</td>
+            <td>praesentium officia autem.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: #678989;
+      }
+      td {
+        background-color: #96d4d4;
+      }
+    </style>
+  </body>
+</html>
