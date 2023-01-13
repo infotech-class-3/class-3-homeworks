@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Homework</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-template-rows:repeat(12,50px);
+            gap: 3px;
+            grid-template-areas: 
+            "header header button button"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "main main main aside1"
+            "aside2 section section aside1"
+            "footer footer footer footer"
+            ;
+        }    
+        
+        .item-1{
+            grid-area: header;
+            padding: 5px;
+            background-color: #f5fbcc;
+        }
+        .item-2{
+            grid-area: button;
+            border-radius: 6px;
+            background-color: #e5d3c5;
+            
+        }
+        .item-3{
+            grid-area: main;
+            border-radius: 6px;
+            background-color: #fbe69e;
+            padding: 5px;           
+            
+        }
+        .item-4{
+            grid-area: aside1;
+            border-radius: 6px;
+            background-color: #79f48e;
+            padding: 5px;
+            
+        }
+        .item-5{
+            grid-area: aside2;
+            border-radius: 6px;
+            background-color: #79f48e;
+            padding: 5px;
+        }
+        .item-6{
+            grid-area: section;
+            border-radius: 6px;
+            background-color: #e85bf9;
+            padding: 5px;
+        }
+        .item6 p{
+            padding: 5px;
+        }
+        .item-7{
+            grid-area: footer;
+            background-color: #ead0de;
+            padding: 5px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+
+        }
+        li{
+            align-items: center;
+            padding: 10px;
+                       
+        }
+        li:hover{
+            vertical-align: center;
+            /* align-items: center; */
+            background-color:rgb(155, 138, 115);
+            border-radius: 10px;
+            padding: 5px;
+            /* width: 100px;
+            height: 30px; */
+        }
+        .item-3 p{
+            text-indent: 30px;
+        }
+        .item-3 img{
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 45px;            
+        }
+
+        @media (max-width:720px){
+            body{                
+                background-image: url("tree.jpg");
+            }
+            .item-3 p{
+                padding: 10px;
+            }
+            .item-1{
+                text-align: center;
+                padding: 10px;
+                opacity: 0.5;
+            }
+            .item-2{
+                text-align: center;
+                padding: 10px;
+                opacity: 0.7;
+            }
+            
+            .item-7{
+                text-align: center;
+                padding: 10px;
+            }
+
+            .item-3 img{
+                display: none;
+            }
+
+            .item-5{
+                display: none;
+            }
+
+            .container{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-template-rows:repeat(8,75px);
+            gap: 3px;
+            grid-template-areas: 
+            "header header header header"
+            "button button button button"
+            "aside1 aside1 aside1 aside1"
+            "main main main main"
+            "main main main main"
+            "main main main main"            
+            "section section section section"
+            "footer footer footer footer"
+            ;
+        }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item item-1">
+        <h2>Header</h2>
+    </div>
+    <div class="item item-2">
+        <ul>
+        <li>About</li>
+        <li>Home</li>
+        <li>Contact</li>
+        </ul>
+        
+    </div>
+    <div class="item item-3">
+        <h3>Main</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore excepturi, delectus temporibus, minima fugiat dolor sunt nemo beatae vel aut optio corrupti laboriosam exercitationem officiis saepe sapiente dolorem consequatur?</p>
+        <div class="img" >
+            <img src="/tree.jpg" alt="resim" width="400px">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore excepturi, delectus temporibus, minima fugiat dolor sunt nemo beatae vel aut optio corrupti laboriosam exercitationem officiis saepe sapiente dolorem consequatur?</p>
+
+    </div>
+    <div class="item item-4">
+        <h3>Aside One</h3>
+    </div>    
+    <div class="item item-5">
+        <h3>Aside Two</h3>
+    </div>
+    <div class="item item-6">
+        <h3>Section</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="item item-7">
+        <h3>Footer</h3>
+    </div>
+    
+
+    </div>
+    
+</body>
+</html>
