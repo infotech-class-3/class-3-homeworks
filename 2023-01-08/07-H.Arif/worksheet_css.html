@@ -54,18 +54,19 @@
             border-radius: 5px;
         }
         .main p{
-            padding: 20px;
-            margin: 20px;
+            padding: 3px;
+            margin: 5px;
             text-align:justify;
             text-indent: 20px;
+        }
+        .image{
+            text-align: center;
         }
         .main img{
             border: 0;
             border-radius: 20px;
             width: 300px;
             height: 300px;
-            align-items: center;
-            
         }
         .aside1{
             grid-area: aside1;
@@ -99,7 +100,7 @@
            .container{
                 display: grid;
                 grid-template-columns: 100%;
-                grid-template-rows: 20% 75px 200px 75px 75px;
+                grid-template-rows: 20% 75px 300px 100px 75px;
                 grid-template-areas:"header"
                                     "aside1"
                                     "main"
@@ -107,19 +108,24 @@
                                     "footer";
             }
             .header{
-                display: flex;
-                flex-wrap: wrap;
-                box-sizing: border-box;
+                flex-direction: column;
             }
             .main{
                 display: grid;
                 
+            }
+            .main img{
+                display: none;
             }
             .aside2{
                 display: none;
             }
             .section{
                 display: grid;
+            }
+            .section p{
+            margin: 5px;
+            padding: 3px;
             }
             .footer{
                 display:grid;
@@ -145,14 +151,18 @@
             <h4>USAGE</h4>
             </div>
         </header>
-        <main class="main"><h2>main</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, expedita! Dolore modi sequi quibusdam doloribus. Tempore et unde ullam eligendi maxime debitis, voluptatem nesciunt sunt dolores dignissimos rerum saepe beatae minima at quasi obcaecati soluta nobis animi veritatis? Ullam sapiente facere ipsa quam. Praesentium illo, harum iste quibusdam distinctio quam.</p>
-            <img src="./img/cherry_tree.jpg" >
+        <main class="main"><h2>Main</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut recusandae quibusdam explicabo pariatur? Similique reprehenderit iure deserunt ratione cupiditate! Sed dolores sunt totam ipsa neque consectetur quis doloremque porro voluptatibus.</p>
+            <div class="image"><img src="./img/cherry_tree.jpg"/></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquam sint beatae autem quos quam, velit tempore corporis dolorem suscipit doloremque culpa repellat porro praesentium. Officia delectus illo ipsam omnis?</p>
         </main>
-        <aside class="aside1" >aside One</aside>
-        <aside class="aside2" >aside Two</aside>
-        <section class="section">section</section>
-        <footer class="footer">footer</footer>
+        <aside class="aside1" ><h2>Aside One</h2></aside>
+        <aside class="aside2" ><h2>Aside Two</h2></aside>
+        <section class="section">
+            <h2>Section</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </section>
+        <footer class="footer"><h2>Footer</h2></footer>
     </div>
    
 </body>
