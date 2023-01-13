@@ -1,0 +1,130 @@
+.container{
+    height: 740px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows:70px 70% auto auto;
+    gap: 5px;
+    grid-template-areas: "header    header      header      header      header"
+                         "main      main        main        main        aside1"
+                         "aside2    section     section     section     aside1"
+                         "footer    footer      footer      footer      footer"; 
+                        
+}
+.header{
+    display: flex;
+    background-color: rgb(113, 169, 113);
+    grid-area: header;
+
+}
+.header > *{
+    flex-grow: 1;
+}
+.logo{
+    display: flex;
+    background-color: rgb(113, 169, 113);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    grid-area: logo;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    background-color: rgb(238, 232, 223);
+    color: rgb(26, 18, 18);
+    border-radius: 10px;
+    grid-area: navbar;
+}
+.navbar h4:hover{
+    font-size:larger;
+    color:red;
+    transform:rotate3d(1,2,1,20deg);
+}
+.main{
+    grid-area: main;
+    background-color:rgb(236, 195, 90);
+    border-radius: 5px;
+}
+.main p{
+    padding: 3px;
+    margin: 5px;
+    text-align:justify;
+    text-indent: 20px;
+}
+.image{
+    text-align: center;
+}
+.main img{
+    border: 0;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+.aside1{
+    grid-area: aside1;
+    background-color: rgb(43, 178, 43);
+    border-radius: 5px;
+}
+.aside2{
+    grid-area: aside2;
+    background-color: rgb(43, 178, 43);
+    border-radius: 5px;
+}
+.section{
+    grid-area: section;
+    background-color:rgb(138, 84, 189);
+    border-radius: 5px;
+}
+.footer{
+    grid-area: footer;
+    background-color:darkgrey;
+    border-radius: 5px;
+}
+@media (max-width:1024px){
+    @keyframes animation {
+        from {background-color:darkgray ;}
+        to {background-color:aqua ;}
+    }
+    body{
+        background-image: url("./img/cherry_tree.jpg");
+    }
+        
+   .container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 75px 300px 100px 75px;
+        grid-template-areas:"header"
+                            "aside1"
+                            "main"
+                            "section"
+                            "footer";
+    }
+    .header{
+        flex-direction: column;
+    }
+    .main{
+        display: grid;
+        
+    }
+    .main img{
+        display: none;
+    }
+    .aside2{
+        display: none;
+    }
+    .section{
+        display: grid;
+    }
+    .section p{
+    margin: 5px;
+    padding: 3px;
+    }
+    .footer{
+        display:grid;
+        background-color: aqua;
+        animation-name: animation;
+        animation-duration: 4s;
+        animation-iteration-count: 3;
+    }
+  
+} 
