@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: peachpuff;
+    margin-bottom: 10px;
+}
+.logo{
+    
+    margin-left: 25px;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    background-color: rgb(200, 181, 181);
+    border-radius: 1rem;
+}
+ 
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li a:hover{
+    color: rgb(75, 98, 139);
+    
+}
+.box{
+    height: 800px;
+    display: grid;
+    grid-template-columns: (4, 1fr) ;
+    grid-template-rows: (4, 1fr);
+    grid-template-areas: 
+    "main main main aside-one"
+    "main main main aside-one"
+    "main main main aside-one"
+    "aside-2 section section aside-one";
+    gap: 10px;
+
+}
+
+
+.aside-one{
+    background-color: aquamarine;
+    border-radius: 1rem;
+    grid-area: aside-one;
+}
+.main{
+    background-color: burlywood;
+    border-radius: 1rem;
+    grid-area: main;
+}
+.main img{
+    width: 400px;
+    height: 500px;
+    
+
+    
+}
+.aside-2{
+    background-color: aquamarine;
+    border-radius: 1rem;
+    grid-area: aside-2;
+}
+
+
+
+
+.section{
+    background-color: hotpink;
+    border-radius: 1rem;
+    grid-area: section;
+}
+.footer{
+    background-color: deepskyblue;
+    border-radius: 1rem;
+}
+.main img{
+    width: 400px;
+    height: 500px;
+    border-radius: 1rem;
+    
+}
+.main figure{
+    text-align: center;
+}
+
+
+@media only screen and (max-width:600px){
+    body{
+        background-image: url("flower-7696955_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+    .box{
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: (4, 1fr);
+        grid-template-areas: 
+        "aside-one"
+        "main"
+        "main"
+        "section";
+        height: 600px;
+    }
+    .aside-2{
+        display: none;
+    }
+
+
+
+
+    .main figure{
+        display: none;
+
+    }
+    .main p{
+        margin-top: 50px;
+    }
+
+
+
+
+
+
+
+
