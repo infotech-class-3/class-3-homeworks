@@ -26,7 +26,7 @@ footer {
   border-radius: 10px;
   padding: 10px;
 }
-/* .image{
+/*!.image{
 
     text-align: center;
     margin: 20px;
@@ -145,11 +145,11 @@ footer {
   }
   .aside2 {
     display: none;
-    /* visibility: hidden; */
+    /*! visibility: hidden; */
   }
 }
 
-/* .hover{
+/*! .hover{
     background-color: gray;
     height: 50px;
     flex-direction: row;
