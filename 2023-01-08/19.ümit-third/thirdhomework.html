@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvatica;
+  }
+.container {
+    height: 30rem;
+    display: grid;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: (4, 1fr);
+    gap: 0.5rem;
+    grid-template-areas:
+      "main main main asideOne"
+      "main main main asideOne"
+      "main main main asideOne"
+      "asideTwo section section section";
+}
+
+.nav {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: #ddc74c;
+}
+.header {
+    margin: auto 1rem;
+    font-size: 35px;
+    font-weight: 700;
+  }
+  
+.menu {
+    background-color: rgb(168, 113, 218);
+    width: 50%;
+    border-radius: 10px;
+  }
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+.menu ul li a {
+    color: rgb(134, 28, 99);
+    text-decoration: none;
+    background-color: rgb(212, 189, 233);
+    padding: 12px 12px;
+    border-radius:56px ;
+    font-size: 20px;
+    transition: color 0.25s ease;
+ 
+}
+.menu ul li a.active, 
+.menu ul li a:hover {
+    background-color: rgb(178, 127, 225);
+    color: rgb(255, 255, 255); 
+}
+.main {
+    grid-area: main;
+    background-color: rgb(243, 52, 52);
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1rem;
+}
+p {
+    font-size: 20px;
+    font-weight: 100;
+}
+.main figure {
+    text-align: center;
+    margin: 1rem 0;
+}
+.main img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 2rem;
+}
+
+.asideOne {
+    grid-area: asideOne;
+    background-color: chartreuse;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.asideTwo {
+    grid-area: asideTwo;
+    background-color: chartreuse;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.section {
+    grid-area: section;
+    background-color: rgb(220, 94, 184);
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.footer {
+    background-color: rgb(188, 176, 184);
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+@media only screen and (max-width:60rem){
+      body{
+          background-image: url("tre.jpg");
+          background-repeat: no:repeat;
+          background-size: cover;
+      }
+  
+     
+.nav {
+    height: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    margin:1rem;
+  }
+  .menu {
+    width:100%;
+    height:100%;
+    border-radius:0;
+  }
+  .container {
+    height: 30rem;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    grid-template-rows: (4, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+      "asideOne"
+      "main"
+      "main "
+      "section";
+}
+
+  .asideTwo {
+    background-color: chartreuse;
+}
+.main {
+    background-color: rgb(243, 52, 52);
+}
+
+.asideOne {
+    background-color: chartreuse;
+}
+
+.section {
+    background-color: rgb(220, 94, 184);
+}
+
+.main figure {
+    display:none;
+}
+.main p {
+    margin-top:1rem;  
+}
+
+}
+    </style>
+</head>
+<body>
+        <nav class="nav">
+            <div class="header">Header</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+            <div class="container">
+            <main class="main">Main
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam modi eius numquam consectetur sequi error deleniti doloribus perferendis alias a.</p>
+                <figure>  
+                <img src="tre.jpg" alt="" width="100" height="110">
+                </figure>
+            
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iusto ex culpa quis aliquid, eius modi velit exercitationem quas aperiam reprehenderit. Aliquid minus quibusdam dolores.</p>
+            </main>
+            <aside class="asideOne">Aside One</aside>    
+            <aside class="asideTwo">Aside Two</aside> 
+            <section class="section">Section
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, enim! </p>
+            </section>
+           
+    </div>
+    <footer class="footer">Footer</footer>
+</body>
+</html>
