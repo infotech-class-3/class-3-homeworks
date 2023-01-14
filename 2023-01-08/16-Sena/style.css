@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 10px;
+}
+   body{
+    font-size:1.5rem;
+   }
+       
+    
+header{
+    background-color: rgb(241, 241, 193);
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 0.5rem;
+    height:60px;
+
+}
+header h2{
+    margin: auto 1rem;
+}
+
+header nav{
+    background-color:rgb(201, 183, 158);
+    border-radius: 10px 0  0 10px;
+    width: 60%;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+}
+header nav ul li a{
+    color:black;
+    font-size: small;
+    text-decoration: none;
+
+}
+
+.container{
+  
+    display: grid;
+    grid-template-columns: (4,1fr);
+    grid-template-rows: (4,1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "Main Main Main ASIDE"
+    "Main Main Main ASIDE"
+    "Main Main Main ASIDE"
+    "ASIDE-2 Section Section Section"
+    
+}
+.Main{
+    background-color: rgb(250, 223, 166);
+    padding: 1rem;
+    grid-area: Main;
+    margin-top: 1px;
+
+}
+
+.Main figure{
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.Main img{
+    width: 40%;
+    border-radius: 2rem;
+
+}
+.ASIDE{
+    width: 20rem;
+    background-color: rgb(88, 235, 166);
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-area: ASIDE;
+}
+
+.ASIDE-2{
+    width: 25rem;
+    background-color: rgb(88, 235, 166);
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-area: ASIDE-2;
+}
+.Section{
+    background-color: rgb(242, 67, 248);
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-area: Section;
+}
+footer{
+    height: 5rem;
+    background-color: rgb(187, 185, 181);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/********MEDIA********/
+
+@media only screen and (max-width: 60rem){
+    body{
+        background-image: url("37786hd.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+  
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+
+    }
+    header nav{
+        height: 50%;
+        width:100%;
+        border-radius:0%;
+    }
+    .container{
+        height: 50rem;
+     
+        grid-template-columns: (1,1fr);
+        grid-template-rows: (4,1fr);
+        gap: 1rem;
+        grid-template-areas: 
+        "ASIDE"
+        "Main"
+        "Main"
+        "Section"
+        
+    }
+    .ASIDE{
+        width: 100%;
+    }
+    .ASIDE-2{
+        display: none;
+    }
+    footer{
+        background-color:rgb(27, 200, 223) ;
+    }
+    .Main figure{
+        display: none;
+    }
+    .Main p{
+        margin top: 1rem;
+    }
+
+
+    }
