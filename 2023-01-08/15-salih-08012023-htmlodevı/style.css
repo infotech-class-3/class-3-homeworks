@@ -59,6 +59,7 @@ nav {
 nav ul {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
 }
 nav ul li {
   height: 70px;
