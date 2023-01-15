@@ -4,225 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <style>
-
-        *{
-            box-sizing: border-box;
-            
-            
-            padding: 0;
-            margin: 0;
-        }
-        .container{
-            grid-template-columns:repeat(4, 1fr);
-            grid-template-rows:repeat(12,50px);
-            display: grid;
-            gap: 5px;
-            grid-template-areas: 
-            "header header button button"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "main main main aside1"
-            "aside2 section section aside1"
-            "footer footer footer footer"
-;
-        }
-        
-        .item1{
-            grid-area: header;
-            padding: 10px;
-            background-color: #d8f74d;
-        }
-        .item2{
-            grid-area: button;
-            border-radius: 6px;
-            background-color: #986742;
-            
-        }
-        .item3{
-            grid-area: main;
-            border-radius: 6px;
-            background-color: #81b1e4;
-            padding: 5px;           
-            
-        }
-        .item4{
-            grid-area: aside1;
-            border-radius: 6px;
-            background-color: #79f48e;
-            padding: 5px;
-            
-        }
-        .item5{
-            grid-area: aside2;
-            border-radius: 6px;
-            background-color: #79f48e;
-            padding: 5px;
-        }
-        .item6{
-            grid-area: section;
-            border-radius: 6px;
-            background-color: #e85bf9;
-            padding: 5px;
-        }
-                      
-        .item7{
-            grid-area: footer;
-            background-color: #ead0de;
-            padding: 5px;
-        }
-
-        ul{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style-type: none;
-
-        }
-        li{
-            align-items: center;
-            padding: 10px;
-                       
-        }
-        li.a:hover{
-            vertical-align: center;
-            cursor:pointer;
-            background-color:rgb(182, 249, 255);
-            border-radius: 10px;
-            padding: 5px;
-            font-size: 25px;
-            
-        }
-        li.b:hover{
-            vertical-align: center;
-            cursor:pointer;
-            background-color:rgb(182, 249, 255);
-            border-radius: 10px;
-            padding: 5px;
-            font-size: 25px;
-
-        }
-        li.c:hover{
-            vertical-align: center;
-            cursor:pointer;
-            background-color:rgb(182, 249, 255);
-            border-radius: 10px;
-            padding: 5px;
-            font-size: 25px;
-        }
-        .item4:hover{
-            background-color:rgb(182, 249, 255);
-            font-size: 50px;
-        }      
-         
-        .item3 img{
-            padding: 10px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 45px;            
-        }
-
-        @media (max-width:720px){
-            body{                
-                background-image: url("tree.jpg");
-            }
-            .item3 p{
-                padding: 10px;
-            }
-            .item1{
-                text-align: center;
-                padding: 10px;
-                opacity: 0.5;
-            }
-            .item2{
-                text-align: center;
-                padding: 10px;
-                opacity: 0.5;
-            }
-            
-            .item7{
-                text-align: center;
-                padding: 10px;
-            }
-
-            .item3 img{
-                display: none;
-            }
-
-            .item5{
-                display: none;
-            }
-
-            .container{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            display: grid;
-            gap: 3px; 
-            grid-template-columns:repeat(4, 1fr);
-            grid-template-rows:repeat(8,75px);
-               grid-template-areas: 
-            "header header header header"
-            "button button button button"
-            "aside1 aside1 aside1 aside1"
-            "main main main main"
-            "main main main main"
-            "main main main main"            
-            "section section section section"
-            "footer footer footer footer"
-                 ;           
-        }
-            
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-    <div class="item item1">
-        <h2>Header</h2>
-    </div>
-    <div class="item item2">
-        <ul>
-        <li class="a" id="a">About</li>
-        <li class="b" id="b">Home</li>
-        <li class="c" id="c" >Contact</li>
-        </ul>
-        
-    </div>
-    <div class="item item3">
-        <h3>Main</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore excepturi, delectus temporibus, minima fugiat dolor sunt nemo beatae vel aut optio corrupti laboriosam exercitationem officiis saepe sapiente dolorem consequatur?</p>
-        <div class="img" >
-            <img src="tree.jpg" alt="resim" width="400px">
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore excepturi, delectus temporibus, minima fugiat dolor sunt nemo beatae vel aut optio corrupti laboriosam exercitationem officiis saepe sapiente dolorem consequatur?</p>
+    <!-- header -->
+    <header>
+        <h1>Header</h1>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- aside one -->
+    <aside class="aside1">
+        <h2>Aside one</h2>
+    </aside>
 
-    </div>
-    <div class="item item4">
-        <h3>Aside One</h3>
-    </div>    
-    <div class="item item5">
-        <h3>Aside Two</h3>
-    </div>
-    <div class="item item6">
-        <h3>Section</h3>
+    <!-- aside two -->
+    <aside class="aside2">
+        <h2>Aside two</h2>
+    </aside>
+<!-- main -->
+    <main>
+        <h2>Main</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia ea excepturi ullam? Voluptatum, architecto suscipit! Non veritatis architecto at atque aperiam, hic fugiat voluptatibus. Adipisci unde itaque mollitia! Distinctio similique vero dolorum reprehenderit quis deserunt maxime voluptate, corrupti repellendus? Accusamus similique quidem consequatur itaque ipsum reiciendis odio at saepe eum.
+
+        </p>
+        <figure>
+            <img src="./tree.jpg" alt="" >
+        </figure>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem hic enim temporibus cumque vel consequuntur! Provident dolorum perferendis, nisi optio labore ex! Corporis delectus fuga in incidunt sunt odit minima.</p>
+    </main>
+
+    <!-- section -->
+    <section>
+        <h2>Section</h2>
         <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div class="item item7">
-        <h3>Footer</h3>
-    </div>
-    
+    </section>
 
-    </div>
-    
+    <!-- footer -->
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
 </body>
 </html>
