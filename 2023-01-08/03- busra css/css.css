@@ -1,0 +1,155 @@
+*{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows:repeat(12,50px);
+        gap: 3px;
+        grid-template-areas: 
+        "header header button button"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "aside2 section section aside1"
+        "footer footer footer footer"
+        ;
+    }    
+    
+    .item-1{
+        grid-area: header;
+        padding: 5px;
+        background-color: #939293;
+    }
+    .item-2{
+        grid-area: button;
+        border-radius: 6px;
+        background-color: #f4ace5;
+        
+    }
+    .item-3{
+        grid-area: main;
+        border-radius: 6px;
+        background-color: #f0f4e0;
+        padding: 5px;           
+        
+    }
+    .item-4{
+        grid-area: aside1;
+        border-radius: 6px;
+        background-color: #f157cb;
+        padding: 5px;
+        
+    }
+    .item-5{
+        grid-area: aside2;
+        border-radius: 6px;
+        background-color: #ee83f5;
+        padding: 5px;
+    }
+    .item-6{
+        grid-area: section;
+        border-radius: 6px;
+        background-color: #6c8d9f;
+        padding: 5px;
+    }
+    .item6 p{
+        padding: 5px;
+    }
+    .item-7{
+        grid-area: footer;
+        background-color: #3e5c73;
+        padding: 5px;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+
+    }
+    li{
+        align-items: center;
+        padding: 10px;
+                   
+    }
+    li:hover{
+        vertical-align: center;
+        background-color:rgb(155, 138, 115);
+        border-radius: 10px;
+        padding: 5px;
+        
+    }
+    .item-3 p{
+        text-indent: 30px;
+    }
+    .item-3 img{
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 45px;            
+    }
+
+    @media (max-width:720px){
+        body{                
+            background-image: url("sevimli-baykus-yumurtadan-cikti-kanvas-tablosu-TH024172.jpg") ;
+        }
+        .item-3 p{
+            padding: 10px;
+        }
+        .item-1{
+            text-align: center;
+            padding: 10px;
+            opacity: 0.5;
+        }
+        .item-2{
+            text-align: center;
+            padding: 10px;
+            opacity: 0.7;
+        }
+        
+        .item-7{
+            text-align: center;
+            padding: 10px;
+        }
+
+        .item-3 img{
+            display: none;
+        }
+
+        .item-5{
+            display: none;
+        }
+
+        .container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows:repeat(8,75px);
+        gap: 3px;
+        grid-template-areas: 
+        "header header header header"
+        "button button button button"
+        "aside1 aside1 aside1 aside1"
+        "main main main main"
+        "main main main main"
+        "main main main main"            
+        "section section section section"
+        "footer footer footer footer"
+        ;
+    }
+        
+    }
