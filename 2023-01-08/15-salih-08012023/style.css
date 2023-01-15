@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 70px repeat(5, minmax(70px, auto));
+  grid-template-areas:
+    "header header header header"
+    "main main main aside1"
+    "main main main aside1"
+    "main main main aside1"
+    "aside2 section section aside1"
+    "footer footer footer footer";
+  gap: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+main,
+.aside1,
+.aside2,
+section,
+footer {
+  border-radius: 10px;
+  padding: 10px;
+}
+/*!.image{
+
+    text-align: center;
+    margin: 20px;
+
+    
+} */
+
+.image img {
+  text-align: center;
+  margin: 20px 100px 20px 150px;
+  border-radius: 10px;
+}
+img:hover {
+  transform: scale(1.2);
+  font-size: larger;
+  border-radius: 10px;
+}
+header > * {
+  flex-grow: 1;
+}
+header {
+  text-align: center;
+  flex-direction: center;
+}
+nav {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav ul li {
+  height: 70px;
+  width: 100px;
+  padding-top: 25px;
+  transition: 0.5s;
+}
+
+header {
+  display: flex;
+  grid-area: header;
+  background-color: orange;
+}
+header h1 {
+  padding: 15px 10px;
+}
+
+main {
+  grid-area: main;
+  background-color: aqua;
+}
+main p {
+  padding: 10px;
+  text-indent: 15px;
+}
+.aside1 {
+  grid-area: aside1;
+  background-color: rgb(0, 255, 136);
+  transition: 0.5s;
+}
+.aside1:hover {
+  font-size: larger;
+  background-color: rgb(58, 117, 79);
+}
+.aside2 {
+  grid-area: aside2;
+  background-color: rgb(0, 255, 136);
+  transition: 0.5s;
+}
+.aside2:hover {
+  font-size: larger;
+  background-color: rgb(58, 117, 79);
+}
+section {
+  grid-area: section;
+  background-color: blueviolet;
+}
+footer {
+  grid-area: footer;
+  background-color: gray;
+}
+
+.li1:hover,
+.li2:hover,
+.li3:hover {
+  background-color: rgb(185, 185, 25);
+  color: black;
+  border-bottom: 5px solid blue;
+  border-radius: 20px;
+}
+
+@media (max-width: 720px) {
+  body {
+    background-image: url("./tree.jpg");
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    order: 0;
+  }
+  body .aside1 {
+    order: 1;
+  }
+  main {
+    order: 2;
+  }
+  section {
+    order: 3;
+  }
+  footer {
+    order: 4;
+  }
+  .aside2 {
+    display: none;
+    /*! visibility: hidden; */
+  }
+}
+
+/*! .hover{
+    background-color: gray;
+    height: 50px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container{
+    display: grid;
+    grid-template-columns: 70% 30% repeat(1, auto);
+
+}
+.box1{
+    background-color: rgb(161, 161, 77);
+    width: 70%;
+    height: 300px;
+}
+.paragraph{
+    text-indent: 5%;
+    text-align: justify;
+}
+.img{
+    margin: 10px 10px 10px 160px;
+}
+.box2{
+    background-color: blue;
+    height: 400px;
+}
+.box3{
+    background-color: aqua; 
+}*/
