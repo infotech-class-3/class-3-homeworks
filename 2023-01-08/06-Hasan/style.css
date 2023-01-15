@@ -1,0 +1,197 @@
+
+
+  .container{       
+      height: 800px;
+      display: grid;
+      grid-template-columns: repeat(6,15%);
+      grid-template-rows: 10% 70% 10% 10%;
+      gap: 5px;
+      grid-template-areas:   "box1 box1 box1 box2 box2 box2 "
+                             "box3 box3 box3 box3 box3 box4"
+                             "box5 box5 box6 box6 box6 box4"
+                             "box7 box7 box7 box7 box7 box7";
+    }
+    ul{ height: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items:center;    
+        font-size: large;
+      font-weight: bolder;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;   
+      text-align: center;
+      }
+
+    .header{
+        grid-area: box1;
+        font-size: larger;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+        border-radius: 20px;
+        background-color:rgb(206, 207, 198);
+        
+    }
+   
+       img{
+        text-align: center;
+       }
+    
+    .nav > ul {
+      list-style: none;
+      border-radius: 20px;
+      
+    }
+    .nav{
+        grid-area: box2;
+        border-radius: 20px;
+        padding: 20px;
+        background-color:rgb(232, 234, 240);
+    }
+    
+    .main{
+        grid-area: box3;
+        border-radius: 20px;
+        padding: 20px;
+        background-color:rgb(250, 245, 171);
+     
+    }
+    .main>main{
+         font-size: large;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    .aside-1{
+        grid-area: box4;
+        background-color:rgb(81, 250, 81) ;
+        border-radius: 20px;
+        font-size: large;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+    }
+    .aside-2{
+        grid-area: box5;
+        border-radius: 20px;
+        padding: 20px;
+        background-color:rgb(81, 250, 81);
+        font-size: larger;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .section{
+        grid-area: box6;
+        border-radius: 20px;
+        padding: 20px;
+        background-color:rgb(241, 44, 192);
+        font-size: larger;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       
+    }
+    #gizli{
+        display: none;
+    }
+    .footer{
+        grid-area: box7;
+        border-radius: 20px;
+        padding: 20px;
+        background-color:rgb(241, 221, 236);
+        font-size: larger;
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #home {
+        width: 400px;
+        height: 300px;
+        margin: 10px 25% 10px 25%;
+        border-radius: 40px;
+
+}
+li:hover{
+    font-size: larger;
+    font-stretch: extra-expanded;
+    color:rgb(238, 241, 238);
+    background-color: rgb(59, 61, 61);
+    border-bottom: 4px solid blue;
+    border-radius: 8px;
+}
+.aside-1:hover{
+    background-color: rgb(6, 146, 18);
+    font-size: larger;
+}
+.aside-2 > div{
+    border-radius: 10px;
+    background-color: aqua;
+}
+@media (max-width: 800px) {
+    .container {
+       
+        grid-template-areas:
+    'box1 box1 box1 box1'
+    'box2 box2 box2 box2'
+    'box3 box3 box3 box3'
+    'box4 box4 box4 box4'
+    'box6 box6 box6 box6'
+    'box7 box7 box7 box7';
+    grid-template-rows: 100px 100px auto 100px 100px 100px ;
+    grid-template-columns: 100%;
+    border-radius: 5px;
+    margin:0;
+    margin-right: 0%;
+   width:800px;
+    
+
+}
+
+.aside-2 {
+    display: none;
+  }
+body {
+    background:url('uranüs.jpg') no-repeat;
+    background-repeat:no-repeat;
+    background-attachment: fixed;    
+    background-size: cover;
+
+}
+img{
+    size: cover;
+}
+.main>img{
+    display: none;
+  }
+  .main, .nav, .aside-1, .aside-2, .header, .section, .footer, ul{
+    border-radius: 5px;
+    font-size: 10px;
+  }
+  #gizli{
+display:flex;
+font-size:8px;
+font-style: italic;
+color: rgb(232, 233, 182);
+  }
+.header{
+    grid-area: box1;
+    font-size:medium;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 30px;
+    border-radius: 5px;
+  
+  
+}
+.nav {
+    flex-direction: column;
+    text-align: center;
+   opacity: 0.5;
+   
+   
+  }
+  ul{
+    justify-content:space-around;
+  }
+
+  .home{
+    display: none;
+  }
+     
+}
