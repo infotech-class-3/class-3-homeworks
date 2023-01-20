@@ -14,4 +14,4 @@ Additional Bootstrap components such as forms, modals, and cards can be added to
 
 ## Authors
 
-* **Yusuf Tür** - [Your Github](https://github.com/yusufttur)
+* [**Yusuf Tür**] (https://github.com/yusufttur)
