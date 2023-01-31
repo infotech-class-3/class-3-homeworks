@@ -1,0 +1,1 @@
+# javascript basit hesap fonksiyonu

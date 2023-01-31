@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+.container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    
+    background-color: #f2f2f2;
+    
+    
+}
+
+.menu > ul {
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+
+}
+ a {
+    display: flex;
+    text-decoration: none;
+    height: 35px;
+    width: 60px;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 15px;
+
+    
+    
+}
+
+a:hover{
+  border-bottom: 5px solid blue;
+  font-size:20px;
+  height: 40px;
+  width: 70px;
+  transition:0.5s;
+  background-color:rgb(241, 227, 171);
+  
+}
+
+.menu{
+  background-color: #E5C4D4;
+  width: 50%;
+  border-radius: 10px;
+  padding-top: 10px;
+  
+ 
+}
+
+
+
+
+
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fdf9d0;
+    width: 50%;
+    border-radius: 10px;
+    
+}
+
+.menu > ul {
+    display: flex;
+   justify-content: space-around;
+  
+}
+
+
+
+.kapsam {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    max-width: 100%;
+    
+    
+}
+
+.main {
+    background-color: rgb(255, 224, 161);
+    grid-column: 1 / span 3;
+    margin-top: 7px;
+    color: #0b0b0b;
+    border-radius: 15px;
+    
+}
+
+
+.aside {
+    background-color: rgb(139, 222, 147);
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.aside:hover{
+    background-color: gray;
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.aside2 {
+    background-color: rgb(139, 222, 147);
+    grid-column: 1 / 1;
+    grid-row: 2;
+    
+}
+
+.section {
+    background-color: rgb(255, 40, 255);
+    grid-column:2 /span 2 ;
+    grid-row: 2;
+}
+
+.footer{
+    height: 60px;
+    background-color: rgb(228, 214, 223);
+    grid-column: 1 / span 4;
+    ;
+}
+
+.item{
+  
+    margin-top: 7px;
+    color: #060606;
+    border-radius: 15px;
+    padding: 15px 10px 10px 20px;
+    
+   
+}
+
+.main > img {
+    height: 500px;
+    border-radius: 35px;
+    align-items: center;
+    padding: 10px ;
+    margin-left: 140px;
+    
+    
+}
+
+
+
+@media screen and (max-width:720px) {
+    body {
+        background-image: url(/2023-01-08/12.Mustafa/tree.jpg);
+    }
+    
+}
+
+@media screen and (max-width: 720px) {
+    .img {
+      display: none;
+      
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .aside {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .menu {
+      
+      width: 100%;
+      opacity: 0.9;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .container {
+      
+     display: block;
+     
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .logo {
+      
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .main {
+      margin-top: 40px;
+      grid-column: 1 / span 4;
+     width: 100%;
+     
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .aside2 {
+     display: block;
+      grid-column: 1 / span 4;
+     width: 100%;
+     
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .section {
+     display: block;
+      grid-column: 1 / span 4;
+      grid-row: 3 / span 4;
+     width: 100%;
+     
+    }
+  }
+
