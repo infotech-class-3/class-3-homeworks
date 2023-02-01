@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 70px repeat(4, minmax(70px, auto)) 90px;
+    gap: 5px;
+    grid-template-areas: "header header header header"
+                         "main main main aside1"
+                         "main main main aside1"
+                         "main main main aside1"
+                         "aside2 section section aside1"
+                         "footer footer footer footer";
+
+}
+header{
+    grid-area: header;
+    background-color: lightyellow;
+    display: flex;
+   
+}
+header > *{
+    flex-grow: 1;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    background-color: aquamarine;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    height: 70px;
+    width: 100px;
+   padding-top: 30px;
+}
+nav ul li:hover{
+    background-color: azure;
+}
+.aside1:hover{
+    background-color: aqua;
+    
+}
+
+a{
+    text-decoration: none;
+    color:black
+}
+figure{
+    text-align: center;
+}
+figure img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20px;
+}
+.aside1{
+    grid-area: aside1;
+    background-color: brown;
+}
+.aside2{
+    grid-area: aside2;
+    background-color: brown;
+}
+main{
+    grid-area: main;
+    background-color: antiquewhite;
+}
+section{
+    grid-area: section;
+    background-color: chartreuse;
+}
+footer{
+    grid-area: footer;
+    background-color: cornsilk;
+}
+nav{
+    grid-area: nav;
+}
+
+@media only screen and (max-width: 720px) {
+    body{
+        grid-template-areas: "header header header header"
+                         "aside1 aside1 aside1 aside1"
+                         "main main main main"
+                         "main main main main"
+                         "section section section section"
+                         "footer footer footer footer";
+        background-image: url(./tree.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+    header{
+        flex-direction: column;
+    }
+    header h1{
+        text-align: center;
+    }
+    .aside2{
+        display: none;
+    }
+    .aside1{
+        opacity: .4;
+         margin-top: 3rem;
+    }
+    main{
+        opacity: .6;
+       
+    }
+    figure{
+        display: none;
+    }
+    
+}

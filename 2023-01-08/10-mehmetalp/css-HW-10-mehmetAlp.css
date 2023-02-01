@@ -1,0 +1,155 @@
+:root{
+    --colorHeader:rgb(155, 162, 125);
+    --colorMain:rgb(255,230,158);
+    --colorNavHeadFooter:rgb(229,211,197);
+    --colorAside:rgb(51,255,142);
+    --colorSection:rgb(255,0,255);
+    
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header   header   header  header"
+                          "main    main     main   aside"
+                          "aside2  section  section aside"
+                          "footer  footer    footer footer";
+    gap:5px;
+    font-family: 'Poppins', sans-serif;
+}   
+
+@media (max-width:768px) {
+    body{display: grid;
+
+    grid-template-areas: "header"
+                          "main "
+                          "aside"
+                          "section"
+                          "footer" ;
+    gap:10px;
+    background-image: url(../img/tree.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+
+    }
+
+    header{
+        text-align: center;
+        height: 10rem;
+    }
+    
+    
+    .aside2, img{
+        display:none
+    }
+}
+
+header{
+    background-color: var(--colorHeader);
+    grid-area: header ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px; 
+    height:7vh;
+}    
+
+header > div{
+    flex:1 0 auto;
+}
+
+header nav.menu{
+    background-color: var(--colorNavHeadFooter);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    flex-grow: 1 0 auto;
+}
+
+nav.menu ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+nav.menu ul li{
+    padding-right:75px;
+    padding-left: 75px;
+    list-style: none;
+    
+}
+
+nav.menu ul li a{
+    padding: 20px 50px;
+    text-decoration: none;
+}
+
+main{
+    background-color: var(--colorMain);
+    grid-area: main ;
+    padding-top: 20px ;
+    padding-left: 20px;
+    border-radius: 0.5rem;
+}
+
+main:nth-child(2) p{
+    text-indent: 20px;
+}  
+
+main figure{
+    
+    /* border-radius: 2rem; */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+aside{
+    background-color: var(--colorAside);
+    grid-area: aside ;
+    padding-top: 20px ;
+    padding-left: 20px;
+    border-radius: 0.5rem;
+
+}
+aside:hover{
+    font-size: 3rem;
+    background-color: var(--colorAside);
+    opacity: 0.5;
+}
+.aside2{
+    background-color: var(--colorAside);
+    grid-area: aside2 ;
+    padding-left: 20px;
+    border-radius: 0.5rem;
+
+}
+section{
+    background-color: var(--colorSection);
+    grid-area: section ;
+    padding-top: 20px ;
+    padding-left: 20px;
+    border-radius: 0.5rem;
+
+
+}
+
+footer{
+    background-color: var(--colorNavHeadFooter);
+    grid-area: footer;
+    padding-left: 20px;
+    padding-top: 20px ;
+
+}
