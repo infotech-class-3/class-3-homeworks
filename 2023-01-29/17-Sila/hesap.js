@@ -1,8 +1,15 @@
 /*Basic Calculator 
 -> "0/0" ve "sayı/0" için farklı sonuçlar eklendi 
 -> işlem değişkenine 4 işlem sembolleri dışında değer verilmesi durumunda uyarı*/
+var a;
+var b;
+var _x;
+/* Hesap makinesini kullanmak için aşağıdaki yorum satırlarını aktif hale getirerek istediğiniz değerleri giriniz*/
+// a="sayi değeri";
+// b="sayi değeri";
+// _x="+ - * /";
 function calc(a, b, _x) { 
-   var sonuç1={
+    var sonuç1={
     işlem_sonucu: "bulunamadı",
     hata: "sayı giriniz"
    };
@@ -49,5 +56,13 @@ function calc(a, b, _x) {
     
 return sonuç1
 }
-var sonuç= calc(7, 1, "/");
-console.log(sonuç);
+var sonuç= calc(a,b, _x);
+var hatakodu={
+    işlem_sonucu: "bulunamadı",
+    hata: "sayı giriniz"
+   };
+if (typeof a=="number" && typeof b=="number") {
+    console.log(sonuç);
+} else {
+    console.log(hatakodu)
+}
