@@ -1,6 +1,7 @@
 /*Basic Calculator 
 -> "0/0" ve "sayı/0" için farklı sonuçlar eklendi 
--> işlem değişkenine 4 işlem sembolleri dışında değer verilmesi durumunda uyarı*/
+-> işlem değişkenine 4 işlem sembolleri dışında değer verilmesi durumunda uyarı
+-> sayı değişkenlerine number dışında değer verilmesi durumunda uyarı*/
 var a;
 var b;
 var _x;
