@@ -17,6 +17,7 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
+  background-color: rgb(214, 209, 209);
 }
 .calculator-input {
   width: 100%;
@@ -42,6 +43,7 @@ button:hover {
 }
 .operator {
   color: aqua;
+  background-color: green;
 }
 .clear {
   background-color: red;
