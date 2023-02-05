@@ -13,26 +13,30 @@ switch (islem) {
         console.log(toplama)
         
         break;
+
     case "cikar":
         var cikarma = sayi1 - sayi2
         console.log(cikarma)
             
         break;
-        case "carp":
-            var carpma = sayi1 * sayi2
-            console.log(carpma)
+
+    case "carp":
+        var carpma = sayi1 * sayi2
+        console.log(carpma)
             
-            break;
-        case "böl":
-            if (sayi2 == 0) {
-                error = console.log("2. Sayi 0 degerini alamaz.")
-                return error
-            } else {
+        break;
+
+    case "böl":
+        if (sayi2 == 0) {
+            error = console.log("2. Sayi 0 degerini alamaz.")
+            return error
+            
+        } else {
                 
-            var bölme = sayi1 / sayi2
-            console.log(bölme)
-            }    
-            break;
+        var bölme = sayi1 / sayi2
+        console.log(bölme)
+        }    
+        break;
                 
     default:
         break;
