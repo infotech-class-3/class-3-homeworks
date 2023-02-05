@@ -1,4 +1,12 @@
 function hesapla(sayi1,sayi2,islem){
+var deger = {
+    sonuc : 0,
+    hata : "Sayi degeri giriniz!"
+};
+if (typeof sayi1 !== "number" ||typeof sayi2 !== "number" ) {
+console.log(deger.hata)        
+}
+    
 switch (islem) {
     case "topla":
         var toplama = sayi1 + sayi2
@@ -15,11 +23,17 @@ switch (islem) {
             console.log(carpma)
             
             break;
-        case "bölme":
+        case "böl":
+            if (sayi2 == 0) {
+                error = console.log("2. Sayi 0 degerini alamaz.")
+                return error
+            } else {
+                
             var bölme = sayi1 / sayi2
             console.log(bölme)
+            }    
+            break;
                 
-            break;    
     default:
         break;
 }
