@@ -35,7 +35,7 @@ car_brands2 =['Citroen', 'Hyundai', 'Kia', 'Mazda', 'Suzuki', 'Toyota', 'Nissan'
 
 ### soru6:
 - car_brands dizisinin son 5 elemanini console.log ile ekrana yazdiriniz.
-- beklenen sonuc: ['Volkswagen', 'Renault', 'Peugeot', 'Citroen', 'Hyundai']
+- beklenen sonuc: [ 'Opel', 'Fiat', 'Volkswagen', 'Renault', 'Peugeot' ]
 
 ### soru7:
 - car_brands dizisinin 3. elemanini console.log ile ekrana yazdiriniz.
