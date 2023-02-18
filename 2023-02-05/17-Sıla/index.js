@@ -64,20 +64,28 @@ console.log("soru 5.2: "+ car_brands.join(","));
 // ### soru6: car_brands dizisinin son 5 elemanı
 console.log(car_brands.slice(-5));
 
-// ### soru7:
-// - car_brands dizisinin 3. elemanini console.log ile ekrana yazdiriniz.
-// - beklenen sonuc: Audi
+// ### soru7: car_brands dizisinin 3. elemanini
 console.log("soru 7: "+car_brands[2]);
 
-// ### soru8: ***************
-// - bir dizideki verilen indexlerdeki 2 elemanin yerlerini degistiren bir FONKSIYON yaziniz.
-// - ornek: degistir(car_brands, 3, 5) => ['BMW', 'Mercedes', 'Audi', 'Fiat', 'Opel', 'Ford', 'Volkswagen', 'Renault', 'Peugeot']
-
+// ### soru8: verilen indexlerdeki 2 elemanin yerlerini degistiren FONKSIYON
+var a=3;
+var b=5;
+var sonuc8=[...car_brands];
+function changeTwoEleman(a, b) {
+    sonuc8.splice(a,1,car_brands[b])
+    sonuc8.splice(b,1,car_brands[a])
+    return sonuc8;
+}
+console.log(changeTwoEleman(a,b));
 
 // ### soru9: ************
 // - bir dizideki elemanlari tekil yapan bir FONKSIYON yaziniz.
 // - (Tekrar eden elemanlari siliniz.)
 // - ornek: [1,2,3,3,4,5,5,6] => [1,2,3,4,5,6]
+var x=[1,2,3,3,4,5,5,6];
+var y= [...x];
+function sadelestirme() {
+}
 
 // ### soru10: car_brands + car_brands2. Hem CONCAT hem SPREAD ile
 console.log(car_brands.concat(car_brands2))
