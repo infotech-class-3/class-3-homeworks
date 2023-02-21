@@ -20,15 +20,16 @@ myFunction('ankara');
 let myFunction2 = (x) => {
 let arr = x.split("").reverse()
 console.log(arr);
+
 let reversed = arr.join("");
-
-
 console.log(reversed);
-
-
 
 }
 myFunction2(str);
+myFunction2(str2);
+
+
+
 
 
 
