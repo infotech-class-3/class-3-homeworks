@@ -35,9 +35,11 @@ console.log(tersinecevirme('bugun hava cok guzel'));
 // question3
 
  x4 = 'bugun hava cok guzel'
- console.log(x4.split('').reverse().join(''));
+ console.log(x4.split(' ').reverse().join(' '));
+ console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+ console.log(x4.split(' ').reverse().join(' '));
 
- const kelimeterscevirme = (x5) => x5.split('').reverse('').join('');
+ const kelimeterscevirme = (x5) => x5.split(' ').reverse('').join(' ');
  console.log(kelimeterscevirme('bugun hava cok guzel'));
 
 
@@ -112,7 +114,7 @@ console.log(car_brands.splice(3));
 
 
 console.log('====================');
-console.log(car_brands.slice(3, car_brands.length-1));
+console.log(car_brands.slice(3));
 
 
 
