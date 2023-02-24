@@ -80,3 +80,5 @@ console.log(characters.sort((a,b) => b.height-a.height));
 console.log(characters.sort());
 //4
 console.log(characters.sort((a,b) => b.gender-a.gender));
+
+              //***EVERY***
