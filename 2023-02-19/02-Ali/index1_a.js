@@ -148,4 +148,3 @@ console.log(isThereHeight);
 //4. Kütlesi 50'den az olan en az bir karakter var mı?
 isThereMass = characters.some((personel) => personel.mass < 40 );
 console.log(isThereMass);
-
