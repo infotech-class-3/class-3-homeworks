@@ -39,3 +39,4 @@ const orders = [
     
     
     // 5) 123 kimlikli ürün satıldı mı?
+    
