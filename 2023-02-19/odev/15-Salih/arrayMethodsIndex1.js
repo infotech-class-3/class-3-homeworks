@@ -84,7 +84,7 @@ return characters;
 },{});
 console.log(groupOfColorEye);
 //4
-lengthOfNames= characters.reduce((character, person)=>{
+lengthOfNames= characters.reduce((character, person)=>{                                                                             
     characters[person.name]=person.name.length;
     return characters;
     },{});
@@ -111,6 +111,13 @@ console.log(characters.sort((a,b) => b.mass-a.mass));
 //2
 console.log(characters.sort((a,b) => b.height-a.height));
 //3
+characters.sort((a,b) => {
+    if(a.name<b.name){
+        return -1
+    }else {
+        return 0
+        }
+})
 console.log(characters.sort());
 //4
 console.log(characters.sort((a,b) => b.gender-a.gender));
