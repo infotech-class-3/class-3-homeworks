@@ -45,9 +45,13 @@ console.log(characters.map((character)=> {return character.name.split(" ")[0]}))
 console.log(characters.map((character)=> {return character.mass}).reduce((total, number)=>total+number));
 //2. Tüm karakterlerin toplam yüksekliğini alın
 console.log(characters.map((character)=> {return character.height}).reduce((total, number)=>total+number));
-//3. Göz rengine göre toplam karakter sayısını alın ?????????
-//4. Tüm karakter adlarındaki toplam karakter sayısını alın ??????????
+//3. Göz rengine göre toplam karakter sayısını alın
+console.log("mavi gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "blue").reduce((toplam,x)=>toplam+x));
+console.log("sarı gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "yellow").reduce((toplam,x)=>toplam+x));
+console.log("kahve gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "brown").reduce((toplam,x)=>toplam+x));
 
+//4. Tüm karakter adlarındaki toplam karakter sayısını alın
+console.log(characters.map((character)=>character.name.length).reduce((total,karakter)=>total+karakter));
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın
@@ -61,10 +65,13 @@ console.log(characters.filter((character) => character.gender === 'female'));
 
 //***SORT***
 //1. Kütleye göre sırala
-console.log(characters.sort((a,b)=>b.mass-a.mass));
+var chracters2=[...characters];
+console.log(chracters2.sort((a,b)=>b.mass-a.mass));
 //2. Yüksekliğe göre sırala
-console.log(characters.sort((a,b)=>b.height-a.height));
+var chracters3=[...characters];
+console.log(chracters3.sort((a,b)=>b.height-a.height));
 //3. İsme göre sırala ???????????
+console.log(characters.map((chracter)=>chracter.name).sort());
 //4. Cinsiyete göre sırala ??????????
 
 //***EVERY***
@@ -104,7 +111,7 @@ const people = [
 ];
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-console.log(people.map((person)=>{return parseInt(person.salary)}).reduce((acc, number)=>acc+number,0)/12);
+console.log(people.map((person)=>{return parseInt(person.salary)}).reduce((acc, number)=>acc+number,0)/people.length);
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
 var atTheMoment = new Date;
@@ -113,8 +120,8 @@ console.log(people.filter((person) => atTheMoment.getFullYear()-person.DOB.split
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
 console.log(people.map((person)=>{return person.firstName +" "+ person.lastName}))
 
-// 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.  ???????????????*
-var YaşListesi=people.sort((a,b)=> b.DOB.split("/")[2]-a.DOB.split("/")[2]);
+// 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
+var YaşListesi=people.sort((a,b)=> b.DOB.split("/")[2].concat(b.DOB.split("/")[0])-a.DOB.split("/")[2].concat(a.DOB.split("/")[0]));
 console.log(YaşListesi);
 
 // 5) Her bölümde kaç kişi var? ????????????*
@@ -144,7 +151,7 @@ const orders = [
 ];
 
 // 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
-
+console.log(orders.filter((order)=>order.customerId==="234" && order.delivered==false).map((item)=>item.items));
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
 
@@ -155,5 +162,5 @@ console.log(orders.every((a)=> a.delivered == true));
 // 4) '123' kimlikli müşteri sipariş verdi mi?
 console.log(orders.some((a)=>a.customerId == 123));
 
-// 5) 123 kimlikli ürün satıldı mı? ???????????????
-console.log(orders.some((a)=> a.items.productId == 123));
+// 5) 123 kimlikli ürün satıldı mı?
+console.log(orders.some((a)=> a.delivered==true && a.items.some((b)=>b.productId=="123")));
