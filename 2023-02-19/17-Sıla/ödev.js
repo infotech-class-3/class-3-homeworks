@@ -1,4 +1,4 @@
-/**Part 1**/
+/**Part 1 **/                                        
 const characters = [
     {
         name: 'Luke Skywalker',
@@ -42,16 +42,24 @@ console.log(characters.map((character)=> {return character.name.split(" ")[0]}))
 
 //***REDUCE***
 //1. Tüm karakterlerin toplam kütlesini alın
-console.log(characters.map((character)=> {return character.mass}).reduce((total, number)=>total+number));
+console.log(characters.reduce((totalMass, student)=>totalMass + student.mass,0));
 //2. Tüm karakterlerin toplam yüksekliğini alın
-console.log(characters.map((character)=> {return character.height}).reduce((total, number)=>total+number));
+console.log(characters.reduce((total, person)=>total+person.height,0));
 //3. Göz rengine göre toplam karakter sayısını alın
-console.log("mavi gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "blue").reduce((toplam,x)=>toplam+x));
-console.log("sarı gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "yellow").reduce((toplam,x)=>toplam+x));
-console.log("kahve gözlü karakter sayısı: "+characters.map((character)=>character.eye_color === "brown").reduce((toplam,x)=>toplam+x));
+console.log(characters.reduce((gözRengi, chracter)=> {
+    if (gözRengi[chracter.eye_color]) {
+        gözRengi[chracter.eye_color] ++
+    } else {
+        gözRengi[chracter.eye_color]=1
+    }
+    return gözRengi;
+},{}));
 
 //4. Tüm karakter adlarındaki toplam karakter sayısını alın
-console.log(characters.map((character)=>character.name.length).reduce((total,karakter)=>total+karakter));
+console.log(characters.reduce((isim,karakter)=>{
+    isim[karakter.name]=karakter.name.length;
+    return isim;
+},{}));
 
 //***FILTER***
 //1. 100'den büyük kütleye sahip karakterler alın
@@ -70,9 +78,22 @@ console.log(chracters2.sort((a,b)=>b.mass-a.mass));
 //2. Yüksekliğe göre sırala
 var chracters3=[...characters];
 console.log(chracters3.sort((a,b)=>b.height-a.height));
-//3. İsme göre sırala ???????????
+//3. İsme göre sırala                                      
 console.log(characters.map((chracter)=>chracter.name).sort());
-//4. Cinsiyete göre sırala ??????????
+//4. Cinsiyete göre sırala 
+var genderNumber
+characters.forEach(element => {
+    if (element.gender==="female") {
+        genderNumber = 1
+        element.gender=["female", genderNumber]
+}
+else if (element.gender==="male"){
+    genderNumber= 0
+    element.gender=["female", genderNumber]
+}
+return genderNumber;
+});
+console.log(characters.sort((a, b)=>b.gender[1]-a.gender[1]));
 
 //***EVERY***
 //1. Her karakterin mavi gözleri var mı?
@@ -94,7 +115,7 @@ console.log(characters.some((character) => character.height > 210))
 //4. Kütlesi 50'den az olan en az bir karakter var mı?
 console.log(characters.some((character) => character.mass < 50))
 
-/**Part 2**/
+/**Part 2**/                               // + //
 const people = [
     { firstName: 'Sam', lastName: 'Hughes', DOB: '07/07/1978', department: 'Development', salary: '45000' },
     { firstName: 'Terri', lastName: 'Bishop', DOB: '02/04/1989', department: 'Development', salary: '35000' },
@@ -111,7 +132,7 @@ const people = [
 ];
 
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-console.log(people.map((person)=>{return parseInt(person.salary)}).reduce((acc, number)=>acc+number,0)/people.length);
+console.log(Math.ceil(people.reduce((acc, person)=>acc+parseInt(person.salary),0)/people.length));
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
 var atTheMoment = new Date;
@@ -124,10 +145,17 @@ console.log(people.map((person)=>{return person.firstName +" "+ person.lastName}
 var YaşListesi=people.sort((a,b)=> b.DOB.split("/")[2].concat(b.DOB.split("/")[0])-a.DOB.split("/")[2].concat(a.DOB.split("/")[0]));
 console.log(YaşListesi);
 
-// 5) Her bölümde kaç kişi var? ????????????*
-console.log(people.map((person)=>person.department));
+// 5) Her bölümde kaç kişi var?
+console.log(people.reduce((bölüm,kişi)=>{
+    if (bölüm[kişi.department]) {
+        bölüm[kişi.department]++
+    } else {
+        bölüm[kişi.department]=1
+    }
+    return bölüm
+},{}));
 
-/**Part 3**/
+/**Part 3**/ 
 const orders = [
     { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
         { productId: '123', price: 55 },
@@ -154,8 +182,12 @@ const orders = [
 console.log(orders.filter((order)=>order.customerId==="234" && order.delivered==false).map((item)=>item.items));
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
-
-
+var totalPrice;
+orders.forEach((order)=>{
+    var totalPrice=[...order.items].reduce((total, x)=>total+x.price,0)
+    order.items=[...order.items, "total price: "+totalPrice]
+});
+console.log(orders);
 // 3) Tüm siparişler teslim edildi mi?
 console.log(orders.every((a)=> a.delivered == true));
 
