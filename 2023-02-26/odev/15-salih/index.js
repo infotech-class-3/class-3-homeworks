@@ -8,12 +8,12 @@
 //   }
   
 //   calculate(5, 10, displayResult);
-  
 
 const todos= [
     {title:'todo1'},
     {title:'todo2'}
 ];
+
 
 function todolist(){
     setTimeout(() =>{
@@ -29,6 +29,7 @@ function newTodo(newTodo, callback){
         
     },3000);
 }
+
 
 newTodo(
     {title:'todo3'}, todolist,
