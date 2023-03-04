@@ -1,0 +1,236 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif, Arial, Helvatica;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, auto) 25%;
+            grid-template-rows: 70px auto auto auto auto 90px;
+            background-color: cadetblue;
+            gap: 5px;
+            width: 100%;
+            height: 100%;
+            grid-template-areas: "header header header header" "main main main asideone" "main main main asideone" "main main main asideone" "asidetwo section section asideone" "footer footer footer footer";
+        }
+        
+        header {
+            background-color: azure;
+            border-radius: 10px;
+            grid-area: header;
+            font-size: 2fr;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+        }
+        
+        .logo {
+            width: 40%;
+            margin-left: 10px;
+        }
+        
+        nav {
+            width: 60%;
+            background-color: rgb(217, 214, 180);
+            border-radius: 10px;
+            margin: 0;
+        }
+        
+        ul {
+            height: 100%;
+            display: flex;
+            background-color: #34495e;
+            justify-content: space-around;
+            list-style-type: none;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        ul li {
+            height: 60px;
+        }
+        
+        ul li a {
+            display: block;
+            text-align: center;
+            text-decoration-line: none;
+            background-color: #34495e;
+            color: #fff;
+            padding: 23px 10px;
+            align-items: center;
+            height: 100%;
+        }
+        
+        ul li a:hover {
+            background-color: rgb(95, 187, 220);
+            border: 1px;
+            border-radius: 5px;
+        }
+        
+        main {
+            background-color: rgb(241, 191, 125);
+            border-radius: 10px;
+            grid-area: main;
+        }
+        
+        main h1 {
+            margin: 5px 0 0 10px;
+        }
+        
+        main p {
+            font-size: 20px;
+            font-weight: 90px;
+            padding-left: 20px;
+        }
+        
+        figure {
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        figure image {
+            width: auto;
+            height: auto;
+        }
+        
+        .asideone {
+            background-color: rgb(129, 227, 158);
+            border-radius: 10px;
+            grid-area: asideone;
+            /* width: 25%; */
+        }
+        
+        .asidetwo {
+            background-color: rgb(57, 228, 109);
+            border-radius: 10px;
+            grid-area: asidetwo;
+        }
+        
+        section {
+            background-color: rgb(242, 117, 198);
+            border-radius: 10px;
+            grid-area: section;
+        }
+        
+        footer {
+            background-color: rgb(217, 193, 145);
+            border-radius: 10px;
+            grid-area: footer;
+        }
+        
+        @media only screen and (max-width: 720px) {
+            nav ul li a:hover {
+                background-color: aquamarine;
+                color: black;
+                box-shadow: 1px 1px 0 rgb(0, 0, 0, 1);
+            }
+            body {
+                background-image: url(../08-İsmail/image1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .container {
+                grid-template-areas: "header header header header" "asideone asideone asideone asideone" "main main main main" "main main main main" "section section section section" "footer footer footer footer";
+                grid-template-rows: 70px 65px auto auto 90px 100px;
+                height: auto;
+            }
+            .logo {
+                width: 100%;
+                align-items: center;
+                padding: 5px 50px 5px 50px;
+            }
+            header h1 {
+                text-align: center;
+            }
+            main p {
+                margin: 20px 0 10px 0;
+            }
+            header {
+                flex-direction: column;
+            }
+            .asidetwo {
+                display: none;
+            }
+            figure {
+                display: none;
+            }
+            .asideone {
+                margin-top: 25px;
+                height: 4rem;
+                padding: 5px 0 0 5px;
+                background-color: rgb(92, 243, 192);
+            }
+            nav {
+                width: 100%;
+                background-color: rgb(182, 182, 182);
+                color: rgb(0, 0, 0);
+            }
+            nav ul,
+            nav ul li a {
+                background-color: rgb(182, 182, 182);
+                color: rgb(0, 0, 0);
+                height: 100%;
+            }
+            main {
+                margin-top: 25px;
+            }
+            section {
+                padding: 10px 0 0 10px;
+            }
+            footer {
+                text-align: center;
+                padding-top: 10px;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>Header</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <h1>Main</h1>
+
+            <p class="obertext">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia pariatur amet impedit incidunt quis, eveniet quisquam. Debitis modi at vel sequi, unde ipsum non officia aspernatur! Qui ipsum ex cumque!
+            </p>
+            <figure><img src="image1.jpg" alt="" /></figure>
+            <p class="untertext">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi sed soluta, id atque neque illum beatae, iusto eius quos, natus rerum? Esse odio ipsam autem eaque odit quod suscipit.
+            </p>
+        </main>
+        <aside class="asideone">
+            <h2>Aside One</h2>
+        </aside>
+        <aside class="asideTwo">Aside Two</aside>
+        <section>
+            <h2>Section One</h2>
+            <p>Lorem, ipsum dolor sit amet</p>
+        </section>
+        <footer class="footerone">Footer</footer>
+    </div>
+</body>
+
+</html>
