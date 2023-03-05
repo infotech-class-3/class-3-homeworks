@@ -1,3 +1,4 @@
+// bebek bakimi
 function bebekBakimi() {
         return new Promise((resolve, reject) => {
           let uyuyor = true;
@@ -29,4 +30,5 @@ function bebekBakimi() {
         .catch((error) => {
           console.error(error);
         });
+
       
