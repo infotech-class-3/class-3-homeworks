@@ -35,7 +35,7 @@ newTodo(
     {title:'todo3'}, todolist,
 );
 console.log("============================");
-const isWatchwordTrue = true;
+const isWatchwordTrue = false;
 const isThereMoneyInYourAccount = true;
 const youCanWithdraw = true;
 
@@ -82,20 +82,20 @@ promise_1()
                 console.log(sonuc);
             })
             .catch((error)=>{
-                console.log(error);
+                console.warn(error);
             })
         })
         .catch((error)=>{
-            console.log(error);
+            console.warn(error);
         })
     })
     .catch((error)=>{
-        console.log(error);
+        console.warn(error);
     })
 
 const data=[];
 const durum= true;
-const users=['Salih'];
+const users=['Salih'];                                             
 const dataLoader=()=>{
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
@@ -121,3 +121,6 @@ async function islemAkisi(){
 };
 
 islemAkisi();
+
+
+
