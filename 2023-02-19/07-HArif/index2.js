@@ -68,3 +68,4 @@ kisiBolum = people.reduce((bolum, kisi)=>{
 },{})
 console.log("Her bölümde kaç kişi var?");
 console.log(kisiBolum);
+
