@@ -100,3 +100,4 @@ console.log(car_brands);
 car_brands.slice(3, 8);
 console.log(car_brands);
 
+
