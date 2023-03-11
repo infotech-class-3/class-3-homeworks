@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 5;
+}
+.contanier {
+display: grid;
+grid-template-columns:repeat(4, 1fr);
+grid-template-rows:repeat(12,80px);
+gap: 2px;
+grid-template-areas:
+"header header menud menud"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"main main main aside_one"
+"item-1 item-1 item-2 item-2"
+"footer footer footer footer"
+"footer footer footer footer"
+;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+}
+.image_content{
+    border-radius: 8px;
+    width: 400px;
+    height: auto;
+    opacity: 0.8;
+    margin: 13px auto 13px auto;
+    display: block;
+}
+
+  ul.menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #4583ba;
+    border-radius: 10px;
+
+}
+
+li.menu {
+    float: left;
+    width: 30%;
+    border-radius: 10px;
+
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 19px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #5495cd;
+    border-radius: 10px;
+
+}
+
+.header{
+    background-color: rgb(255, 235, 205);
+    grid-area: header;
+    align-self: center;
+}
+.menud{
+    grid-area: menud;
+}
+ .main {
+    grid-area: main;
+    background-color: #ffffff; 
+    padding: 10px;
+    
+ }
+ .item-1 {
+    background-color: #6a994e; 
+    grid-area: item-1;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+ }
+ .item-2 {
+    background-color: #9A97BF; 
+    grid-area: item-2;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+ }
+ .aside_one {
+    background-color: rgb(255, 235, 205); 
+    grid-area: aside_one;
+    padding: 10px;
+    border-radius: 8px;
+    
+ }
+.footer {
+    background-color: #99AC95; 
+    grid-area: footer;
+    padding: 15px;
+    border-radius: 8px;
+ }
+
+ .numberlist{
+    list-style-type:decimal;
+    padding-left: 15px;
+}
+
+@media (max-width: 720px){
+    body{
+        background-image: url("odev_css1.webp");
+    }
+    .contanier {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        grid-template-rows:auto auto;
+        gap: 2px;
+        grid-template-areas:
+        "header"
+        "menud"
+        "main"
+        "aside_one"
+        "item-1"
+        "item-2"
+        "footer"
+        ;
+        opacity: 0.8;
+        }
+        .image_content{
+            /* display: none; */
+        }
+        .header, ul.menu{
+            display: flex;
+            justify-content: center;
+        }
+        
+}

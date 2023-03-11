@@ -1,0 +1,108 @@
+h1{
+    background-color: rgba(255, 127, 80, 0.6);
+    padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px;
+}
+nav ul{
+    align-items: center;
+    height: 40px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: hsl(133, 95%, 70%);
+}
+
+.container{
+    border: solid darkkhaki;
+    border-radius: 20px;
+    display: grid;
+    background-color: darkkhaki;
+    grid-template-columns: auto auto 500px 500px;
+    grid grid-template-rows:auto auto auto;
+    grid-template-areas: "box-2 box-1 box-1 box-1"
+                         " box-2 . box-3 box-3" 
+                         "box-4 box-4 box-4 box-4 ";
+                         
+    gap: 10px
+    
+   
+}
+.grid{
+    margin: 15px;
+    padding: 10px;
+    background-color: azure;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: azure ;
+}
+.grid1{
+    grid-area: box-1;
+}
+.grid2{
+    grid-area: box-2;
+    background-color: rgb(242, 191, 191);
+    border-style: dotted;
+    border-color: crimson;
+}
+.grid3{
+    grid-area: box-3;
+}
+.grid4{
+    grid-area: box-4;
+}
+ol{
+    list-style:lower-greek;
+}
+img{
+    display: block;
+    padding: auto;
+    margin: auto;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    width: 40%;
+    height: 0%;
+}
+footer{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: chocolate;
+}
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: rgb(201, 34, 16);
+    background-color: bisque;
+    font-weight: bolder;
+    font-size: larger;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: rgb(201, 34, 16);
+    border-style: double;
+}
+@media (max-width: 700px){
+    #resim{
+        display: none;
+    }
+    .container{
+        display: contents;
+        background-image: ;
+    }
+    .grid{
+        border: solid;
+        border-color: brown;
+        border-radius: 0%;
+    }
+    body{
+        background-image: url("kelebek.jpg");
+        opacity: calc(.8);
+        background-repeat: no-;
+        background-position: center;
+        background-size: 1500px;
+    }
+}
+

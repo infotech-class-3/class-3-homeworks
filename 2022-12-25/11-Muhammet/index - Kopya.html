@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Bilgi Sİstemi</title>
+</head>
+<center> <h1> Öğrenci Bilgi Sistemi </h1> </center>
+
+ 
+<body>
+    <img src="obs.jpeg" alt="Resim Açıklama" border="0" align="left"/>
+
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    <br><br/>
+    
+
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            
+            <label for="name">Adı:</label>
+            <input type="text" id="ad"/>
+            <br><br/>
+            
+            <label for="surname">Soyadı:</label>
+            <input type="text" id="soyad"/>
+            <br><br/>
+
+            <label for="Date">Doğum Tarihi:</label>
+            <input type="date" id="date"/>
+            <br><br/>
+             
+            <label for="dgm">Doğumyeri:</label>
+            <input type="text" id="dgm"/>
+            <br><br/>
+                
+            <label for="email">E-mail:</label>
+            <input type="email" id="email"/>
+            
+            
+            <br><br/>
+            <label for="cars">Cinsiyetiniz:</label>
+            <select id="cars" name="cars">
+              <option value="Erkek">Erkek</option>
+              <option value="Kız">Kız</option>
+           
+            
+            </select>
+            
+
+
+            <br/><br/>
+
+            <label for="tel">Telefon:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0 (532) 123 23 23" ><br><br>
+            <br/><br/>
+            Diller
+            <br/>
+            <input type="checkbox" name="lng" id="ing"/>İngilizce
+            <input type="checkbox" name="lng" id="Alm"/>Arapça 
+            <input type="checkbox" name="lng" id="Fra"/>Çince
+            <input type="checkbox" name="lng" id="Diger"/>Diger <input type="text" id="diger"/>
+            <br/>
+            <br/>
+            Ögrenim Durumu
+            <br/>
+            <input type="checkbox" name="edu" id="ilk"/>İlkögretim
+            <input type="checkbox" name="edu" id="orta"/>Ortaögretim
+            <input type="checkbox" name="edu" id="ön"/>Önlisans
+            <input type="checkbox" name="edu" id="lisans"/>Lisans
+            <input type="checkbox" name="edu" id="Yüksek"/>YüksekLisans
+            <input type="checkbox" name="edu" id="Dok"/>Doktora
+
+             <br/>
+             <br/>
+            
+        </fieldset>
+        <br/><br/>
+    
+
+        <fieldset>
+        <legend>Kurs Bilgileri</legend>
+        
+        <center><label for="">Katılmak istediğiniz Kurs</label><br /></center>
+        <input type="radio" name="v" value="a1" />JavaScript<br />
+        <input type="radio" name="v" value="a2" />C++<br />
+        <input type="radio" name="v" value="a3" />Phyton<br />
+        <input type="radio" name="v" value="a4" />Php<br />
+        <hr />
+
+        <center><label for="">Girmek istediğiniz Yer? </label><br /></center>
+
+        <input type="checkbox" name="city" value="ank" />Ankara<br />
+        <input type="checkbox" name="city" value="ist" />İstanbul<br />
+        <input type="checkbox" name="city" value="brs" />Bursa<br />
+        <input type="checkbox" name="city" value="erz" />Erzurum<br />
+        <hr />
+        <br/><br/>
+        <label for="cars">Eğitim Dilini Seçiniz:</label>
+        <select id="cars2" name="cars">
+          <option value="volvo">İngilizce</option>
+          <option value="saab">Türkçe</option>
+          <option value="fiat">Arapça</option>
+          <option value="audi">Fransızca</option>
+        </select>
+        <br/><br/>
+        
+        <br/><br/>
+
+        <hr />
+
+        Eklemek İstedikleriniz: <br>
+        <textarea>...</textarea>
+        <br/><br/>
+
+       </fieldset>
+       
+
+   
+<hr />
+
+    <br/><br/>
+        <center>TABLO</center>
+<hr />
+
+<table id="liste"  class="table">
+
+      <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Doğum Tarihi</th>
+        <th>Doğumyeri</th>
+        <th>E-mail</th>
+        <th>Telefon</th>
+        <th>Cinsiyet</th>
+        
+      </tr>
+
+ 
+  </table>
+
+  <br/><br/>
+      
+       <input type="reset" value="GİRİLEN VERİLERİ TEMİZLE"/> 
+       <br/><br/>
+       NOT: Kaydet'e bastığınızda Girilen bilgiler tabloya işlenecektir.
+       <br/><br/>
+  
+    </form>
+    <button class="btn" id="ekle">KAYDET</button>
+  <script>
+   const ad=document.querySelector("#ad");
+   const soyad=document.querySelector("#soyad");
+   const date=document.querySelector("#date");
+   const dgm=document.querySelector("#dgm");
+   const email=document.querySelector("#email");
+   const phone=document.querySelector("#phone");
+   const cars=document.querySelector("#cars");
+   const ekle=document.querySelector("#ekle");
+   const liste=document.querySelector("#liste");
+
+   ekle.onclick=function(){
+        let tad=document.createElement("td");
+        let tsoyad=document.createElement("td");
+        let tdate=document.createElement("td");
+        let tdgm=document.createElement("td");
+        let temail=document.createElement("td");
+        let tphone=document.createElement("td");
+        let tcars=document.createElement("td");
+
+        tad.textContent=ad.value;
+        tsoyad.textContent=soyad.value;
+        tdate.textContent=date.value;
+        tdgm.textContent=dgm.value;
+        temail.textContent=email.value;
+        tphone.textContent=phone.value;
+        tcars.textContent=cars.value;
+
+        let tr=document.createElement("tr");
+
+        tr.appendChild(tad);
+        tr.appendChild(tsoyad);
+        tr.appendChild(tdate);
+        tr.appendChild(tdgm);
+        tr.appendChild(temail);
+        tr.appendChild(tphone);
+        tr.appendChild(tcars);
+
+        liste.appendChild(tr);
+
+        ad.value="";
+        soyad.value="";
+        date.value="";
+        dgm.value="";
+        email.value="";
+        phone.value="";
+        cars.value="";
+
+        ad.focus();
+
+   }
+
+
+  </script>
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+</body>
+</html>

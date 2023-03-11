@@ -1,0 +1,160 @@
+body{
+    background-color: rgb(42, 47, 49);
+} 
+
+.aside1, .aside2, section, main, footer{
+    background-color: rgb(136, 136, 156);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+header{
+    grid-area: header;
+    background: rgb(101, 129, 47);
+    display: flex;
+}
+
+header h1{
+    padding: 15px, 10px;
+    margin-left: 20px;
+    margin-top: 45px;   
+}
+
+header > * {
+    flex-grow: 1;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    background-color: rgb(143, 211, 66);
+}
+
+nav ul li{
+    height: 80px;
+    width: 100px;
+    padding: 20px;
+}
+
+nav ul li:hover{
+    background-color: rgb(104, 128, 17);
+    font-size: 20px;
+    font-weight: 600px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(34, 20, 48);
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(27, 16, 16);
+}
+
+nav{
+    background: rgb(122, 155, 30);,
+    border-radius: 10px;
+}
+
+main{
+    grid-area: main;
+    background: rgb(231, 161, 161);
+}
+
+main p{
+    padding: 10px;
+    text-indent: 30px;
+}
+
+.img{
+    text-align: center;
+}
+
+img{
+    width:25rem;
+    height:25rem;
+    border-radius: 20px;
+}
+
+.aside1{
+    background: rgb(141, 177, 74);
+    grid-area: aside1;
+}
+.aside1:hover{
+    background-color: rgb(122, 155, 30);
+    font-size: 20px;
+}
+
+.aside2{
+    background-color: rgb(74, 184, 184);
+    grid-area: aside2;
+    transition: all 1;
+}
+
+.aside2:hover{
+    background-color: rgb(122, 155, 30);
+    font-size: 20px;
+}
+
+section{
+    background: rgb(223, 138, 223);
+    grid-area: section;
+ }
+
+footer{
+   background: rgb(204, 86, 135);
+   grid-area: footer;
+   text-align: center;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 70px repeat(5, minmax(70, auto));
+    grid-template-areas: 
+        "header header header header"
+        "main main main aside1"
+        "main main main aside1"
+        "main main main aside1"
+        "aside2 section section aside1"
+        "footer footer footer footer";
+    gap: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+@media(max-width: 720px){
+    body{
+        grid-template-areas:
+        "header header header header"
+        "aside1 aside1 aside1 aside1"
+        "main main main main"
+        "main main main main"
+        "section section section section"
+        "footer footer footer footer";
+        grid-template-rows: 150px repeat(5, minmax(70px, auto));
+        background-image: url("Manzara.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .img{
+        display: none;
+    }
+    nav{
+        border-radius: none;
+    }
+    .aside2{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        font-size: large;
+        background-color: aquamarine;
+    }
+}
+

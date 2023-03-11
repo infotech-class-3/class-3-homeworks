@@ -1,0 +1,133 @@
+ 
+@media only screen and (max-width:60rem)
+ {body
+   {
+       background-image: url("flowers.jpg");
+       background-repeat: no:repeat;
+       background-size: cover;
+   }
+  }
+
+.box1{
+    margin-bottom: 1rem;
+    background-color: rgb(211, 23, 192);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 5rem;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 5px;
+}
+
+
+.box1>*{
+    flex-grow: 1;
+}
+
+.box2{
+    background-color: rgba(253,252,179,1);
+    width: 50%;
+    border-radius: 5px;
+}
+  
+.box2:hover{
+    background:rgb(189, 174, 224) ;
+}
+
+.box2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+  
+.box2 ul li a:{
+    text-decoration: none;
+    color: rgb(180, 69, 69);
+    font-weight:bold;
+}
+  
+ 
+
+.container1 {
+    flex-grow: 1;
+    margin: 0;
+    height: 60rem;
+    display: grid;
+    grid-template-columns:(4, 1fr);
+    grid-template-rows:(5, 1fr);
+    gap: 1rem;
+    grid-template-areas:
+   
+    "box3 box3 box3 box4"
+    "box3 box3 box3 box4"
+    "box3 box3 box3 box4"
+    "box5 box6 box6 box6" 
+    "box7 box7 box7 box7";
+}
+
+.box3 {
+    grid-area: box3;
+    background-color: rgb(234, 240, 127);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+p{
+    margin-top:1rem; 
+}
+  
+.box3 figure {
+    text-align: center;
+    margin: 1rem 0;
+    display: ;
+}
+  
+.box3 img {
+    width: 25rem;
+    border-radius: 2rem;
+}
+
+.box4 {
+    grid-area: box4;
+    background-color: rgb(62, 157, 201);
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+.box5 {
+    grid-area: box5;
+    background-color: rgb(189, 174, 224);
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+.box6 {
+    grid-area: box6;
+    background-color: rgb(237, 190, 219);
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+.box7 {
+    grid-area: box7;
+    background-color: rgba(159,191,227,1);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
