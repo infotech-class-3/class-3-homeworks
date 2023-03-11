@@ -30,8 +30,8 @@ car_brands2 =['Citroen', 'Hyundai', 'Kia', 'Mazda', 'Suzuki', 'Toyota', 'Nissan'
 - beklenen sonuc: ['BMW', 'Mercedes', 'Audi', 'Ford', 'Opel']
 
 ### soru5:
-- car_brands dizisinin aralarina virgul kzdiriniz.
-- beklenen soyarak yaonuc: BMW,Mercedes,Audi,Ford,Opel,Fiat,Volkswagen,Renault,Peugeot
+- car_brands dizisinin aralarina virgul koyarak yazdiriniz.
+- beklenen sonuc: BMW,Mercedes,Audi,Ford,Opel,Fiat,Volkswagen,Renault,Peugeot
 
 ### soru6:
 - car_brands dizisinin son 5 elemanini console.log ile ekrana yazdiriniz.
