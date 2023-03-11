@@ -20,16 +20,51 @@ const orders = [
     ]},
 ];
 
+
+console.log("Index 3 ----------------------------------------")
 // 1) Teslim edilmeyen 234 ID'li müşteri için siparişlerin bir listesini alın.
+console.log("1. sorunun cevabi----------------------------------------")
+
+const filteredOrders = [...orders].filter((order) => order.customerId === '234' && !order.delivered);
+
+console.log(filteredOrders);
 
 
 // 2) Sipariş edilen ürünlerin toplam fiyatı ile her siparişte yeni bir özellik oluşturun.
+console.log("2. sorunun cevabi----------------------------------------")
 
+const ordersWithTotalPrice = orders.map(order => ({
+    ...order,
+    totalPrice: order.items.reduce((acc, item) => acc + item.price, 0)
+  }));
+  
+  console.log(ordersWithTotalPrice);
+  
 
 // 3) Tüm siparişler teslim edildi mi?
+console.log("3. sorunun cevabi----------------------------------------")
 
+const hasEveryOrderDeliverd = orders.every((order) => order.delivered === 'yes');
+
+console.log(hasEveryOrderDeliverd);
 
 // 4) '123' kimlikli müşteri sipariş verdi mi?
+console.log("4. sorunun cevabi----------------------------------------")
+
+const customer123Ordered = orders.some(order => order.customerId === '123');
+
+console.log(customer123Ordered);
+
+
 
 
 // 5) 123 kimlikli ürün satıldı mı?
+console.log("5. sorunun cevabi----------------------------------------")
+
+/* const isId123Sold = orders.some(order => order.productId === '123');
+
+console.log(isId123Sold); */
+
+const product123Sold = orders.some(order => order.items.some(item => item.productId === '123'));
+
+console.log(product123Sold);
