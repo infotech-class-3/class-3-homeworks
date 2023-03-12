@@ -1,15 +1,19 @@
 /* SORU 1
 Verilen bir stringin ilk ve son karakteri ayni kontrolu yapan bir FONKSIYON yaziniz
 boolean(true/false) dondurmeli
-ornek: 'abcba' -> true
-ornek: 'abcde' -> false */
-
-function kontrol(yerlesim){
-    console.log(Boolean(yerlesim[0] == yerlesim[yerlesim.length - 1]));
-    
+/*
+function kontrol(metin) {
+    if (metin[0] == metin[metin.length-1]) {
+        return true
+    } else {
+        return false
+*/	    
+	    	    
+function kontrol(metin){
+    return metin[0] == metin[metin.length-1]
     }
-    kontrol('izmir');
-    kontrol('aliağa');
+console.log(kontrol("abcda"));
+console.log(kontrol("abcde"));
 
 
 /*### soru2: 
@@ -61,11 +65,21 @@ console.log("soru6",soru6);
 /*soru 7-dizideki 3.elemani cagirdik*/
 console.log(car_brands[2]);
 
-/*soru 8 iki elemanin yerlerini degistirdik.konumlara yeni isimer vererek yapabildim sadece*/ 
+/*soru 8 iki elemanin yerlerini degistirdik.*/
 
-car_brands.splice(2, 1, 'Opel');
-    car_brands.splice(4, 1, 'Audi'); 
-    console.log(car_brands);
+function diziDegerDegistir(dizi,index1,index2) {
+    tempEleman=dizi[index1]
+    dizi[index1]=dizi[index2]
+    dizi[index2]=tempEleman
+    return dizi
+}
+
+console.log(diziDegerDegistir(car_brands,3,5));
+
+console.log(diziDegerDegistir(car_brands,1,3));
+
+
+
 
 /*soru 9* set kullanarak tekrar eden elemanlari sildik*/
 let sayilar = [1, 2, 3, 2, 4, 5, 5, 6];
