@@ -13,48 +13,41 @@ const people = [
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
 ];
 
-
-console.log("Index 2 ----------------------------------------")
 // 1) Dizideki tüm insanların ortalama geliri nedir? (acc = accumulator = toplayıcı parametre)
-console.log("1. sorunun cevabi----------------------------------------")
-const totalSalary = people.reduce((acc, person) => acc + parseInt(person.salary), 0);
-const averageSalary = totalSalary / people.length;
-console.log(`Dizideki insanların ortalama geliri: ${averageSalary}`);
-
+salary1 = people.reduce((acc, person) => acc + parseInt(person.salary)/people.length, 0)
+console.log(salary1)
 
 // 2) Şu anda 30 yaşından büyük kişiler kimlerdir?
 
-console.log("2. sorunun cevabi----------------------------------------")
+people30 = people.filter(person => {
+    age = new Date().getFullYear() - new Date(person.DOB).getFullYear()
+    // console.log(age)
+    return age > 30 
+})
 
-const today = new Date();
-const currentYear = today.getFullYear();
-
-const over30 = people.filter(person => {
-  const birthYear = new Date(person.DOB).getFullYear();
-  return currentYear - birthYear > 30;
-});
-
-console.log(over30);
+console.log(people30)
 
 
 // 3) Kişilerin tam adının bir listesini alın (ad ve soyadı).
-console.log("3. sorunun cevabi----------------------------------------")
-people.forEach((people)=>{
-    console.log(people.firstName,'',people.lastName)
-    });
+
+fullName = people.map( people => people.firstName + " " + people.lastName)
+
+console.log(fullName)
 
 // 4) Küçükten büyüğe doğru sıralanmış dizideki kişilerin bir listesini alın.
-console.log("4. sorunun cevabi----------------------------------------")
-const sortedPeople = people.sort((a, b) => a.salary - b.salary);
-console.log(sortedPeople);
+ peopleshort = people.sort ((a, b) => new Date (a.DOB) - new Date (b.DOB))
 
+ console.log (peopleshort)
 
 // 5) Her bölümde kaç kişi var? 
-console.log("5. sorunun cevabi----------------------------------------")
-const departmentCounts = {};
-people.forEach(person => {
-  departmentCounts[person.department] = (departmentCounts[person.department] || 0) + 1;
-});
-console.log(departmentCounts);
 
+countByDepartment = people.reduce((acc, person) => {
+    if (acc[person.department] == undefined){
+        acc[person.department] = 1
+    } else {
+        acc[person.department] += 1
+    }
+    return acc
+}, {})
 
+console.log(countByDepartment)
