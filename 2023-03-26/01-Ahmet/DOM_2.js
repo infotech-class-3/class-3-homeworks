@@ -52,6 +52,7 @@ const makeList = (infos) => {
   });
 };
 
+
 select.addEventListener("change", async (e) => {
   const { data } = await getInfos(e.target.value);
 
