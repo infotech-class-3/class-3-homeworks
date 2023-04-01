@@ -58,7 +58,6 @@ select.addEventListener("change", async (e) => {
   makeList(data);
 });
 
-
 const searchInfos = (str) => {
   const temp = userInfos.filter((item) => item.title.includes(str));
 
