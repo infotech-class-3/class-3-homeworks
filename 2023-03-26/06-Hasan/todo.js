@@ -1,6 +1,6 @@
 const select = document.querySelector("#users");
-const tableBody = document.getElementById("tbody");
-const search = document.getElementById("search");
+const tableBody = document.querySelector("#tbody");
+const search = document.querySelector("#search");
 
 var users = [];
 var str = "";
@@ -59,9 +59,7 @@ const makeList = (user) => {
   tr.appendChild(tdEmail);
   tdEmail.textContent = user.email;
 
-  const tdAddress = document.createElement("td");
-  tr.appendChild(tdAddress);
-  tdAddress.textContent = `${user.address.street} ${user.address.suite} ${user.address.city}`;
+  
 };
 
 select.addEventListener("change", async (e) => {
