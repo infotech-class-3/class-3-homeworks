@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <h1>Custom Fields</h1>
+    <label for="field-name">Field Name</label>
+    <input type="text" id="field-name" />
+    <button id="create-field" class="btn btn-primary">Create Field</button>
+
+    <hr />
+
+    <!-- form alani -->
+    <form id="add-values-form">
+      <button type="submit" class="btn btn-outline-primary">Add Values</button> <!-- formu eklemek icin buton ekledik -->
+      <!-- doldurulacak -->
+    </form>
+
+    <hr />
+
+    <table id="data-table" class=" table table-bordered">
+      <thead>
+
+          <tr>
+            <!-- basliklar doldurulacak -->
+          </tr>
+
+      </thead>
+      <tbody>
+        <!-- tr ler buraya -->
+      </tbody>
+    </table>
+
+    <script>
+      
+      function createField() {
+        const fieldNameInput = document.getElementById("field-name");
+        const fieldName =
+          fieldNameInput.value.trim(); // trim() saginda ve solundaki bosluklari kirpar 
+        if (fieldName !== "") {
+          
+          // yeni field inputlar icin burayi yazdik
+          const newFieldInput = document.createElement("input");
+          newFieldInput.type = "text";
+          newFieldInput.name = fieldName;
+          newFieldInput.placeholder = fieldName;
+          newFieldInput.className = 'data-input'
+
+          const addValuesForm = document.getElementById("add-values-form");
+          //addValuesForm.appendChild(newFieldInput);
+          addValuesForm.insertBefore(newFieldInput, addValuesForm.querySelector('button'))
+          
+          //yeni field inputlar icin baslik olusturuyoruz
+          const dataTable = document.getElementById('data-table')
+          const headerRow = dataTable.querySelector('thead tr') //tr lerde id vermedigimiz icin queryselector ile seciyoruz
+
+          //simdi yeni bir header elemani ekleyelim ve th olacak
+          newHeaderCell = document.createElement('th')
+          newHeaderCell.textContent = fieldName
+          headerRow.appendChild(newHeaderCell) 
+
+          fieldNameInput.value = '' // field name deki girilen deger temizlensin diye bu kod yazildi
+        }
+      }
+
+      const createFieldButton = document.getElementById("create-field");
+      createFieldButton.addEventListener("click", createField);
+
+      const addValuesForm = document.getElementById('add-values-form')
+      addValuesForm.addEventListener('submit', function(event){
+        event.preventDefault() // bu satir sayfanin yennilenerek gitmesini engelliyor
+
+        const newRow = document.createElement('tr')
+
+        //const formData = new FormData(addValuesForm) 1.ci yol
+        //console.log(formData)
+
+        console.log(addValuesForm.elements)
+
+        elements = addValuesForm.querySelectorAll('.data-input')
+
+        //const newRow = document.createElement('tr') //burda tr leri olusturalim
+        
+        
+        elements.forEach(e => {
+          const newCell = document.createElement('td') //herbir element (e) icin td atmis olacagiz
+          newCell.textContent = e.value
+          newCell.addEventListener('click', function(event){
+            const newValue = prompt('Enter a new value: ')  //burada yanlislik varsa promt ile kullanicidan yeni deger girmesini sagliyoruz
+            if(newValue) event.target.textContent = newValue
+          })
+
+          newRow.appendChild(newCell)
+
+        });
+
+        const deleteButtonCell = document.createElement('td') // delet butonunu olusturan td
+
+        const deleteButton = document.createElement('button')
+        //simdide button ozelliklerini verelim
+        deleteButton.className = 'btn btn-danger'
+        deleteButton.textContent = 'Delete'
+        deleteButton.addEventListener('click', function(event){
+          //event.target.parentNode //bu kod olmadan da delet butonu duzgun calisiyor
+          deleteButton.parentNode.parentNode.remove()
+        })
+
+        deleteButtonCell.appendChild(deleteButton)
+        newRow.appendChild(deleteButtonCell)
+
+        const dataTable = document.getElementById('data-table')
+        const bodyRow =dataTable.querySelector('tbody')
+
+        bodyRow.appendChild(newRow)
+
+        addValuesForm.rest()  //forma girilen bilgilerin temizlenmesini saglar
+        
+
+      })
+
+
+
+
+    </script>
+  </body>
+</html>
+
+
+    
