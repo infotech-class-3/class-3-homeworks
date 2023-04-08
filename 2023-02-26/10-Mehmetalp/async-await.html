@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const soz1 = (num) => {
+            return new Promise((resolve, reject) =>{
+                setTimeout(() => {
+                    const result = num + 50;
+                    resolve(result);
+                },1000);
+            });
+        }
+
+        const soz2 = (num) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    const result = num *10;
+                    resolve(result);
+                },1000);
+            });
+        }
+
+        const soz3 = (num) => {
+            return new Promise((resolve, reject) =>{
+                setTimeout(()=>{
+                    const result = num /3;
+                    resolve(result);
+                },1000);
+            });
+        }
+
+        const init = async () => {
+
+            console.log("önceki islemler");
+
+            const resp1 = await soz1(20);
+            console.log(resp1);
+
+            const resp2 = await soz2(resp1);
+            console.log(resp2);
+
+            const resp3 = await soz3(resp2);
+            console.log(resp3);
+
+            console.log("sonralki islemler");
+        }
+
+        init();
+    </script>
+</body>
+</html>
