@@ -1,12 +1,75 @@
-//console.log("hello");
 
-const baslik_div = document.createElement("div");
-document.body.appendChild(baslik_div);
 
-const baslik_h1 = document.createElement("h1");
-baslik_h1.style.color = "red";
-baslik_h1.innerText = "Custom fields";
-baslik_div.appendChild(baslik_h1);
+function createField() {
 
-var form = document.createElement("form");
-baslik_div.appendChild(form);
+    const fieldNameInput = document.getElementById("field-name");
+    const fieldName = fieldNameInput.value.trim();
+
+    if(fieldName !==""){
+        const newFieldInput = document.createElement("input");
+        newFieldInput.type = "text";
+        newFieldInput.name = fieldName;
+        newFieldInput.placeholder = fieldName;
+        newFieldInput.className = "data-input"
+
+        const addValuesForm = document.getElementById("add-values-form");
+        // addValuesForm.appendChild(newFieldInput);
+        addValuesForm.insertBefore(newFieldInput,addValuesForm.querySelector("button"));
+
+        const dataTable = document.getElementById("data-table");
+        const headerRow = dataTable.querySelector("thead tr");
+
+        const newHeaderCell = document.createElement("th");
+        newHeaderCell.textContent = fieldName;
+        headerRow.appendChild(newHeaderCell);
+
+        fieldNameInput.value = "";
+    }
+    
+}
+
+const createFieldButton = document.getElementById("create-field");
+createFieldButton.addEventListener("click", createField );
+const addValuesForm = document.querySelector("#add-values-form")
+
+addValuesForm.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const newRow = document.createElement("tr");
+
+    // const formData = new FormData(addValuesForm);
+    elements = addValuesForm.querySelectorAll(".data-input");
+    arrayData = {};
+
+    elements.forEach(e => {
+
+        const newCell = document.createElement("td");
+        newCell.textContent = e.value;
+        
+        newCell.addEventListener("click", function(event){
+            const newValue = prompt("Enter new value: current value=" + event.target.textContent)
+            if(newValue) event.target.textContent = newValue;
+        })
+        newRow.appendChild(newCell);
+    });
+
+    const deleteButtonCell = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.className = "btn btn-danger";
+    deleteButton.textContent = "Delete";
+
+    deleteButton.addEventListener("click", (e) => {
+        //e.target.parentNode.parentNode.remove();
+        deleteButton.parentNode.parentNode.remove();
+    });
+
+    deleteButtonCell.appendChild(deleteButton);
+    newRow.appendChild(deleteButtonCell);
+
+    const dataTable = document.getElementById("data-table");
+    const bodyRaw = dataTable.querySelector("tbody");
+    bodyRaw.appendChild(newRow);
+
+    addValuesForm.reset();
+})
+
