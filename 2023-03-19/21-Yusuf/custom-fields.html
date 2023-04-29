@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Custom Fields</h1>
+    <label for="field-name">Field name:</label>
+    <input type="text" id="field-name" />
+    <button id="create-field" class="btn btn-primary">Create field</button>
+
+    <hr />
+
+    <form id="add-values-form">
+      <button type="submit" class="btn btn-primary">Add values</button>
+    </form>
+
+    <hr />
+    <table id="data-table" class="table table-bordered">
+      <thead>
+        <tr>
+          <!-- headers will be filled here -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- fields will be filled here -->
+      </tbody>
+    </table>
+
+    <script>
+      function createField() {
+        const fieldNameInput = document.getElementById('field-name');
+        const fieldName = fieldNameInput.value.trim();
+        if (fieldName !== '') {
+          const newFieldInput = document.createElement('input');
+          newFieldInput.type = 'text';
+          newFieldInput.name = fieldName;
+          newFieldInput.placeholder = fieldName;
+          newFieldInput.className = 'data-input';
+
+          const addValuesForm = document.getElementById('add-values-form');
+          //   addValuesForm.appendChild(newFieldInput);
+          //   addValuesForm.insertBefore(
+          //     newFieldInput,
+          //     addValuesForm.lastChild.previousSibling
+          //   );
+
+          addValuesForm.insertBefore(
+            newFieldInput,
+            addValuesForm.querySelector('button')
+          );
+
+          const dataTable = document.getElementById('data-table');
+          const headerRow = dataTable.querySelector('thead tr');
+
+          newHeaderCell = document.createElement('th');
+          newHeaderCell.textContent = fieldName;
+          headerRow.appendChild(newHeaderCell);
+        }
+      }
+
+      const createFieldButton = document.getElementById('create-field');
+      createFieldButton.addEventListener('click', createField);
+
+      const addValuesForm = document.getElementById('add-values-form');
+      addValuesForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        // console.log(addValuesForm.elements);
+
+        newRow = document.createElement('tr');
+
+        elements = addValuesForm.querySelectorAll('.data-input');
+        // console.log(elements);
+        // console.log(elements[0].value);
+        elements.forEach((e) => {
+          const newCell = document.createElement('td');
+          newCell.textContent = e.value;
+          newCell.addEventListener('click', function (event) {
+            const newValue = prompt('Enter new value: current value = ');
+          });
+          newRow.appendChild(newCell);
+        });
+
+        const deleteButtonCell = document.createElement('td');
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'btn btn-danger';
+        deleteButton.textContent = 'Delete';
+
+        deleteButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          deleteButton.parentNode.remove();
+        });
+
+        deleteButtonCell.appendChild(deleteButton);
+
+        newRow.appendChild(deleteButton);
+
+        const dataTable = document.getElementById('data-table');
+        const bodyRow = dataTable.querySelector('tbody');
+
+        bodyRow.appendChild(newRow);
+      });
+    </script>
+  </body>
+</html>

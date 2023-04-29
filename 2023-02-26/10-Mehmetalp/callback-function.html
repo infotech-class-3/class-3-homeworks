@@ -7,8 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-   
-    
-    <script src="promis.js"></script>
+    <script>
+const sagHallo = (cb) => {
+    setTimeout(() => {
+        cb("sag hallo");
+    },2000);
+}
+
+console.log("Hallo_1");
+sagHallo( (message) => {
+    console.log(message);
+});
+console.log("Hallo_2");
+
+
+    </script>
 </body>
 </html>
