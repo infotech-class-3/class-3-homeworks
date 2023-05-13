@@ -16,6 +16,7 @@ const userSchema= new mongoose.Schema({
     surname:String,
     age:Number
 })
+
 const User = mongoose.model("User",userSchema);
 const router = express.Router();
 const PORT = 3000
