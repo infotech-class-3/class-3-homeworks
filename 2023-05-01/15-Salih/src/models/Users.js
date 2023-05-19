@@ -14,6 +14,7 @@ const hash = (pass) => {
         pass = hash
     });
     
+    
 }
 
 userSchema.pre('save', function (next){
