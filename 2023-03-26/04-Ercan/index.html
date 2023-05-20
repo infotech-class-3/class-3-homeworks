@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table id="userTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Company</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      
+      <input type="text" id="searchInput" placeholder="Search">
+      
+    
+   <script>
+    const table = document.querySelector('#userTable tbody');
+const searchInput = document.querySelector('#searchInput');
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    for (const user of users) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${user.name}</td>
+        <td>${user.username}</td>
+        <td>${user.email}</td>
+        <td>${user.address.city}</td>
+        <td>${user.phone}</td>
+        <td>${user.website}</td>
+        <td>${user.company.name}</td>
+      `;
+      table.appendChild(tr);
+    }
+
+    searchInput.addEventListener('input', () => {
+      const search = searchInput.value.toLowerCase();
+      const rows = table.querySelectorAll('tr');
+      for (const row of rows) {
+        const name = row.querySelector('td:first-child').textContent.toLowerCase();
+        const username = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        if (name.includes(search) || username.includes(search)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+  });
+
+   </script>
+
+</body>
+</html>
