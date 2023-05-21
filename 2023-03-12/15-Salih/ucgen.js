@@ -16,7 +16,7 @@ function Ucgen(nokta1, nokta2, nokta3){
         console.log('boyle ucgen olmaz')
     
     }
-​
+​                                                              
     if ((nokta1.y == nokta2.y) && (nokta2.y == nokta3.y)){
         console.log('boyle ucgen olmaz')
     }

@@ -53,4 +53,4 @@ function Kronometre(isim) {
 }
 ​
 timer1 = new Kronometre('zamanlayici 1')
-timer2 = new Kronometre('zamanlayici 2')
+timer2 = new Kronometre('zamanlayici 2')                            
