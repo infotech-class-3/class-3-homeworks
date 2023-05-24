@@ -29,17 +29,7 @@ const find = async (req, res) => {
     }
 }
 
-const findAll = async (req, res) => {
-    const id = req.params.id;
-
-    try{
-        const todos = await Todos.find().exec();
-        res.status(200).json(todos);
-    }
-    catch(err){
-        res.status(404).json({message: 'Todolar bulunamadi!'});
-    }
-}
+ 
 
 const update = async (req, res) => {
     const todo = ({userid, description, createdAt, completed} = req.body);

@@ -1,15 +1,24 @@
 require('dotenv').config()
 
 const express = require("express")
+const bodyParser = require('body-parser')
 
+const port = process.env.PORT
 const calc = require("./calc.js")
 
+const islemParametresi = (parametre) =>{
+    if (parametre === 'topla') return '+'
+    if (parametre === 'cikar') return '-'
+    if (parametre === 'carp') return '*'
+    if (parametre === 'bol') return '/'
+}
 const app = express()
-
-app.use(express.urlencoded({extended: true}));
-app.use(express.json()) 
-
 const router = express.Router()
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json()) 
+app.use(router)
+
 
 
 router.get('/islem', (req, res) => {
@@ -32,8 +41,8 @@ router.get('/islem', (req, res) => {
     const islem = req.query.islem
 
 
-    const sonuc = calc(sayi_1, sayi_2, islem)
-    res.send(sonuc)
+    const sonuc = calc(sayi_1, sayi_2, islemParametresi(islem))
+    res.json(sonuc)
 })
 
 router.post('/islem', (req, res) => {
@@ -45,14 +54,12 @@ router.post('/islem', (req, res) => {
     const islem = req.body.islem
 
 
-    const sonuc = calc(sayi_1, sayi_2, islem)
-    res.send(sonuc)
+    const sonuc = calc(sayi_1, sayi_2, islemParametresi(islem))
+    res.json({...sonuc, islem:"Post istegi" })
     // res.send(req.body)
 })
 
-const port = process.env.PORT
 
-app.use(router)
 
 
 app.listen(port, () => {
