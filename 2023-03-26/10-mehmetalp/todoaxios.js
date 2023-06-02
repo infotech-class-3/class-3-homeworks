@@ -1,45 +1,102 @@
-//-jsonplaceholder dan users ları alarak select ile liste oluşturmak.
-const select = document.querySelector("#users");
+const select = document.getElementById("users");
+const tableBody = document.getElementById("tbody");
+const search = document.getElementById("search");
+
+let usersInformation = [];
+let searchStr = "";
+let tempUser = [];
 
 const getUsers = () => {
-    return axios.get("https://jsonplaceholder.typicode.com/users")
-}
+  return axios.get("https://jsonplaceholder.typicode.com/users");
+}; 
 
-console.log(getUsers());
+window.addEventListener("load", async () => {
+  const { data } = await getUsers();
+  usersInformation = data;
 
-// sayfa acilir acilmaz bilgileri yüklenmesini istiyoruz.
-window.addEventListener("load", async () =>{// bilgiler Promise dönmesi nedeniyle bilgileri görmek icin async ve await kullanilmasi gerekir.
-    const { data } = await getUsers();// bilgilrden hangisini almak istenirse, { } arasina yazilmasi gerekir.
-    console.log(data);
-
-    data.forEach((user) => {
-        const option = document.createElement("option");
-        option.value = user.id;
-        option.textContent = user.name;
-        select.appendChild(option)
-    });
-    
+  data.forEach((user) => {
+    const option = document.createElement("option");
+    option.value = user.id;
+    option.innerHTML = user.name;
+    select.appendChild(option);
+  }); 
 });
 
-//-seçilen user ın name, username, email, address.city, phone, website, company.name leri tablo ile gösterilsin.
-const getTodos = async (userId) => {
-    const todos =  await axios.get(
-        `https://jsonplaceholder.typicode.com/todos?userId=${userId}`
-        );
+const getUserInformation = async (id) => {
+  const { data } = await axios.get(
+    `https://jsonplaceholder.typicode.com/users/${id}`
+  );
+  return data;
+};
 
-    console.log(todos);
-    return todos;
-    
+console.log(getUserInformation(1));
+
+const makeList = (user) => {
+  tableBody.innerHTML = "";
+
+  const tr = document.createElement("tr");
+  tableBody.appendChild(tr);
+
+  const tdName = document.createElement("td");
+  tr.appendChild(tdName);
+  tdName.textContent = user.name;
+
+  const tdUSerName = document.createElement("td");
+  tr.appendChild(tdUSerName);
+  tdUSerName.textContent = user.username;
+
+  const tdPhone = document.createElement("td");
+  tr.appendChild(tdPhone);
+  tdPhone.textContent = user.phone;
+
+  const tdEmail = document.createElement("td");
+  tr.appendChild(tdEmail);
+  tdEmail.textContent = user.email;
 }
 
-
-getTodos(4);
-
-
-
-
-
+select.addEventListener("change", async (e) => {
+  const user = await getUserInformation(e.target.value);
+  tempUser = user;
+  makeList(user);
+});
 
 
+search.addEventListener("input", (e) => {
+  searchStr = e.target.value;
+  searchUSer(searchStr);
+});
 
-//-tablo arasından da search yapılabilsin.
+const searchUSer = (searchStr) => {
+  const temp = usersInformation.filter((item) => item.name.includes(searchStr));
+  console.log(temp);
+  if (!searchStr == "") {
+    makeListSearch(temp);
+  } else {
+    makeList(tempUser);
+  }
+};
+
+const makeListSearch = (users) => {
+  tableBody.innerHTML = "";
+  users.map((user) => {
+    const tr = document.createElement("tr");
+    tableBody.appendChild(tr);
+
+    const tdName = document.createElement("td");
+    tr.appendChild(tdName);
+    tdName.textContent = user.name;
+
+    const tdUSerName = document.createElement("td");
+    tr.appendChild(tdUSerName);
+    tdUSerName.textContent = user.username;
+
+    const tdPhone = document.createElement("td");
+    tr.appendChild(tdPhone);
+    tdPhone.textContent = user.phone;
+
+    const tdEmail = document.createElement("td");
+    tr.appendChild(tdEmail);
+    tdEmail.textContent = user.email;
+
+  });
+};
