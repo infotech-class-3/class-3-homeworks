@@ -1,5 +1,6 @@
 const mongoose =require("mongoose");
 const hash = require("../utils/hash.js");
+const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema({
     username:{

@@ -1,4 +1,5 @@
 const express = require('express');
+const auth = require("../middlewares/auth.js");
 
 
 const {create, find, findAll, update, remove} = require("../services/todosService.js");
@@ -17,7 +18,7 @@ router.get('/:id', /* (req, res) => {
 router.post('/findAll', findAll);// body den bilgi gönderiyoruz, userId ye karlilik todolar getiriliyor
 router.post('/create', create);
 router.patch('/:id/update', update);
-router.delete('/:id/delete', remove);
+router.delete('/:id/delete', auth, remove);
 
 
 

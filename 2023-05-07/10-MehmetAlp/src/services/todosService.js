@@ -57,7 +57,11 @@ const remove = async (req,res) =>{
         const data = await Todos.deleteOne({_id : todoId}).exec();
         
         return res.status(200).json(data);
-
+         /* gelen cevap:{
+            "acknowledged": true,
+            "deletedCount": 1
+        }
+        */
         } catch (error) {
         throw res.status(403).json({message:"Todo could not be deleted"}, error);
     }
