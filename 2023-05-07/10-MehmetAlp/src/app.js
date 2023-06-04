@@ -2,7 +2,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 require('dotenv').config();
+
 const usersRouters = require("./routes/usersRoutes.js");
+const todosRoutes = require("./routes/todosRoutes.js");
+
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT;
@@ -23,8 +26,9 @@ mongoose
     .then(console.log('DB baglandi'))
     .catch((err) =>{ console.log(err)})
 
-app.use('/users', usersRouters);
 
+app.use('/users', usersRouters);
+app.use('/todos', todosRoutes);
 
 
 

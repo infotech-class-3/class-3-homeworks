@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {register, login, find, findAll, update, remove} = require('../services/userService.js');
+const {register, login, find, findAll, update, remove} = require('../services/usersService.js');
 
 const auth =require("../middlewares/auth.js");
 const logger =require("../middlewares/logger.js");
