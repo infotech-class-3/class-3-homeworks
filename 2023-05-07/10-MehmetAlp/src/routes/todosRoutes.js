@@ -1,7 +1,7 @@
 const express = require('express');
 
 
-const {create} = require("../services/todosService.js");
+const {create, find, findAll, update, delete} = require("../services/todosService.js");
 
 
 const router = express.Router();
@@ -9,14 +9,14 @@ const router = express.Router();
 
 
 
-router.get('/:id', (req, res) => {
+router.get('/:id', /* (req, res) => {
     res.send(req.params.id);// test etmek icin yazildi
-});//localhost:4000/todos/kayit_id
+} */ find);//localhost:4000/todos/kayit_id
 
-router.get('/findAll');
+router.post('/findAll', findAll);// body den bilgi gönderiyoruz, userId ye karlilik todolar getiriliyor
 router.post('/create', create);
-router.patch('/:id/update');
-router.delete('/:id/delete');
+router.patch('/:id/update', update);
+router.delete('/:id/delete', delete);
 
 
 
