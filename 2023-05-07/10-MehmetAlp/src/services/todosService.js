@@ -50,7 +50,7 @@ const update = async (req,res) =>{
     }
 }
 
-const delete = async (req,res) =>{
+const remove = async (req,res) =>{
     
     try {
         const todoId = req.params.id;
@@ -60,7 +60,7 @@ const delete = async (req,res) =>{
         return res.status(200).json(data);
 
         } catch (error) {
-        throw res.status(403).json({message:"Todo could not be updated"}, error);
+        throw res.status(403).json({message:"Todo could not be deleted"}, error);
     }
 }
 module.exports = {
@@ -68,5 +68,5 @@ module.exports = {
     find,
     findAll,
     update, 
-    delete
+    remove
 }
