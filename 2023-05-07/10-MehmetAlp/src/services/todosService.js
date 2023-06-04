@@ -54,9 +54,8 @@ const remove = async (req,res) =>{
     
     try {
         const todoId = req.params.id;
-        const todo =req.body;
-        const data = await Todos.updateOne({_id:todoId},{$set: todo}).exec();
-       todo.updatedDate = Date.now();
+        const data = await Todos.deleteOne({_id : todoId}).exec();
+        
         return res.status(200).json(data);
 
         } catch (error) {
