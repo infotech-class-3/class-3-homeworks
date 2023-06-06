@@ -1,1 +1,0 @@
-//Sayin hocam vue js kuramadim, problemler cikti, ama kagitlara yazdim. 
