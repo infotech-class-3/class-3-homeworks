@@ -19,6 +19,6 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/users", usersRoutes);
-app.use("/api", todosRoutes);
+app.use("/todos", todosRoutes);
 
 app.listen(PORT, console.log(`Server is running at PORT:${PORT}`));
