@@ -1,6 +1,8 @@
 <template>
   <div>
   <div>{{ name }}</div>
+  <div>{{ user.userName}}--{{ user.password }}</div>
+
   </div>
   
 </template>
@@ -13,7 +15,12 @@ export default {
     return {
       name:"Mehmet",
       surname: "Yildiz",
-      age: 55
+      age: 55,
+
+      user:{
+        userName :"MYildiz",
+        password :"1234"
+      },
     }
   }
 }
