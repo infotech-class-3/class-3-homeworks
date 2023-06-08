@@ -28,4 +28,3 @@ app.use("/users", usersRoutes);
 app.listen(PORT, console.log(`server is runing at PORT: ${PORT}`));
 
 
-
