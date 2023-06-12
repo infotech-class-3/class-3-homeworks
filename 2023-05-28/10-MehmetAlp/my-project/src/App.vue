@@ -29,6 +29,24 @@
 <!-- isMarrie:false oldugunda --- En güzel zamanlara... -->
 <div v-else>En güzel zamanlara...</div> 
 
+    <!-- v-for -->
+    <div>
+      <ul>
+        <li v-for="course in courses" :key="course">
+        {{ course }}
+        </li>
+      </ul>
+    </div>
+<!-- ayni sekilde key propertisine index atama ile yapma -->
+    <div>
+      <ul>
+        <li v-for="(course, index) in courses" :key="index">
+        {{ course }}
+        </li>
+      </ul>
+    </div>
+
+
   </div>
 </template>
 
