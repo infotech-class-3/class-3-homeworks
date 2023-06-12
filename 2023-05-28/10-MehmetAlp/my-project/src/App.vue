@@ -14,7 +14,7 @@
 
     
 
-    <!-- v-bind -->
+    <!-- v-bind attirubutes ekleme cikarma ve degiskliklerinde kullanilir.-->
     <div>Directive ----  v-bind veya :</div>
   <div><input type="button" value="buton"/></div>
   <div><input type="button" v-bind:value="inputValue"/></div>
@@ -46,6 +46,26 @@
       </ul>
     </div>
 
+  <!-- v-model v-bind a göre daha güclü-->
+
+  <div>
+    Kullanici adi <br/>
+    <input type="text" v-model="user.userName" /><br/>
+    Kullanici sifresi <br/>
+    <input type="text" v-model="user.userPassword"/><br/>
+    onaylama sifresi <br/>
+    <input type="text" v-model="user.confirmPassword" /><br/>
+    <div class="liste" v-if="user.userPassword !== user.confirmPassword">sifreler uyumsuz</div>
+<div><button :disabled="!user.userName || user.userPassword !== user.confirmPassword">Gönder</button></div>
+  </div>
+
+
+<!-- watch uygulamasi -->
+  <div>
+    <h2>INFOTECH GPT</h2>
+      <input type="text" v-model="soru"/>
+      <div>{{ cevap }}</div>
+  </div>
 
   </div>
 </template>
@@ -59,13 +79,15 @@ export default {
     age: 55,
     courses: ["nodejs","css","js","vuejs"],
     user: {
-      userName:"Memo",
-      userPassword:"1234",
+      userName:"",
+      userPassword:"",
       confirmPassword:""
     },
     counter: 0,
     inputValue: "Click me!",
-    isMarried: false
+    isMarried: false,
+    soru:"",
+    cevap:""
    } 
   },
   computed:{
@@ -80,10 +102,21 @@ export default {
     azalt(){
       this.counter--;
     }
+  },
+  watch:{
+    soru (yeniDeger, eskiDeger){
+      console.log("Yenideger", yeniDeger);
+      console.log("Eskideger", eskiDeger);
+            this.cevap = yeniDeger == ""?"" : "Dinliyorum, buyrun..."
+
+      if(yeniDeger.indexOf("?")>-1) {
+this.cevap = "Sorunuzu aldim, degerlendiriyorum..."
+      }
+    }
   }
 }
 </script>
 
 <style>
-
+.liste{background-color: blanchedalmond;}
 </style>
