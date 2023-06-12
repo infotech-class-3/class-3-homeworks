@@ -3,7 +3,7 @@
     <div>{{ name }} {{ surName }}--{{ age }} </div>
     <div>{{ courses[0] }} </div>
     <div>{{ user.userName }} {{ user.userPassword }} </div>
-
+    <div>{{ fullName }} </div>
   </div>
 </template>
 
@@ -21,7 +21,12 @@ export default {
       confirmPassword:""
     }
    } 
-  }
+  },
+  computed:{
+      fullName () {
+        return`${this.name} ${this.surName}----> ${this.age}`
+      }
+    }
 }
 </script>
 
