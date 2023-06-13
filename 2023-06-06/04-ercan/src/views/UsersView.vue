@@ -20,7 +20,7 @@
           </v-app-bar-nav-icon>
         </template>
 
-        <v-app-bar-title>Ercan's Bio</v-app-bar-title>
+        <v-app-bar-title>Ercan's Bio...</v-app-bar-title>
 
         <template v-slot:append>
           <v-btn icon="mdi-dots-vertical"></v-btn>
