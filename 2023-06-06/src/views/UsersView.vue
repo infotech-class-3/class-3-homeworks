@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="about">
-    <h1>Kullanicilar Sayfasi</h1>
+    <h1>Kullanicilar Sayfasii</h1>
     
   </div>
     <div>
