@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Usercard from "../components/UserCard.vue";
+import UserCard from "../components/UserCard.vue";
 
 export default {
     name: "UsersView",
