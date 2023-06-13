@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       users: [
-        {id: 1, adi:"Ercan AYDIN", yasi:39, isActive:false },
+        {id: 1, adi:"Ercan AYDIN", yasi:39, isActive:true },
         {id: 2, adi:"Bedrettin AYDIN", yasi:34, isActive:true },
         {id: 3, adi:"Mehmet Efe AYDIN", yasi:11, isActive:false },
         {id: 4, adi:"Olga", yasi:42, isActive:true },
