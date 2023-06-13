@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const Users = require("../models/Users.js");
+<<<<<<< HEAD
+const auth = require("../middleware/auth.js");
+=======
+>>>>>>> main
 const {
   kayit,
   login,
@@ -9,11 +13,27 @@ const {
   update,
   remove,
 } = require("../services/usersService.js");
+<<<<<<< HEAD
+
+=======
 const jwt = require("jsonwebtoken");
+>>>>>>> main
 require("dotenv").config();
 
-//auth -- yetki middleware
+router.post("/kayit", kayit);
 
+<<<<<<< HEAD
+router.post("/login", login);
+
+router.get("/:id", find);
+
+router.get("/", auth, findAll);
+
+router.patch("/update", update);
+
+router.delete("/delete/:id", auth, remove);
+
+=======
 const auth = (req, res, next) => {
   const headerAuth = req.headers["authorization"];
   if (!headerAuth) {
@@ -41,4 +61,5 @@ router.patch("/update", update);
 
 router.delete("/delete/:id", auth, remove);
 
+>>>>>>> main
 module.exports = router;
