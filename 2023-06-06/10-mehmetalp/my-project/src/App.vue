@@ -1,8 +1,9 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> <br/>
-<a href="/about">"a" tagi ile Hakkimizda linki= disariya yönlendirmek icin kullanilacak!!!!</a>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/users">User</router-link>
+<!-- <a href="/about">"a" tagi ile Hakkimizda linki= disariya yönlendirmek icin kullanilacak!!!!</a> -->
 
   </nav>
   <router-view/>
